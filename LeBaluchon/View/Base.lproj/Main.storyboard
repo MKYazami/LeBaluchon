@@ -26,34 +26,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Le Baluchon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dza-xA-EpC">
-                                <rect key="frame" x="16" y="16" width="288" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Le Baluchon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dza-xA-EpC">
+                                <rect key="frame" x="16" y="30" width="288" height="62.5"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPb-bt-blU">
-                                <rect key="frame" x="16" y="196" width="288" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPb-bt-blU">
+                                <rect key="frame" x="16" y="199" width="288" height="58"/>
                                 <color key="backgroundColor" red="0.023529411760000001" green="0.25098039220000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="36"/>
                                 <state key="normal" title="Taux de change">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lea-4o-XhI">
-                                <rect key="frame" x="16" y="297" width="288" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lea-4o-XhI">
+                                <rect key="frame" x="16" y="303" width="288" height="58"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.43137254899999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="36"/>
                                 <state key="normal" title="Traduction">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwE-Tr-sL0">
-                                <rect key="frame" x="16" y="398" width="288" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwE-Tr-sL0">
+                                <rect key="frame" x="16" y="404" width="288" height="58"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.58431372550000005" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="36"/>
                                 <state key="normal" title="Météo">
@@ -62,6 +58,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lea-4o-XhI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2DO-h2-OKN"/>
+                            <constraint firstItem="Lea-4o-XhI" firstAttribute="top" secondItem="IPb-bt-blU" secondAttribute="bottom" constant="46" id="Msz-7I-9tP"/>
+                            <constraint firstItem="rwE-Tr-sL0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ns2-IO-LpO"/>
+                            <constraint firstItem="IPb-bt-blU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dza-xA-EpC" secondAttribute="bottom" constant="100" id="Vh6-OK-MVj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IPb-bt-blU" secondAttribute="trailing" constant="16" id="Zo2-R3-nj6"/>
+                            <constraint firstItem="IPb-bt-blU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aJJ-Kg-hCn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dza-xA-EpC" secondAttribute="trailing" constant="16" id="eoa-Uc-SNy"/>
+                            <constraint firstItem="rwE-Tr-sL0" firstAttribute="top" secondItem="Lea-4o-XhI" secondAttribute="bottom" constant="43" id="fCw-es-Xdy"/>
+                            <constraint firstItem="dza-xA-EpC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gl9-CM-Gl5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lea-4o-XhI" secondAttribute="trailing" constant="16" id="ln5-Xi-DY4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rwE-Tr-sL0" secondAttribute="bottom" constant="106" id="nre-Yp-Wfd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rwE-Tr-sL0" secondAttribute="trailing" constant="16" id="rNs-6S-VPj"/>
+                            <constraint firstItem="dza-xA-EpC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="vCH-oM-Kqc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

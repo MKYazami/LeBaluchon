@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomePageViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +67,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47" y="30"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gKf-bO-jyw">
+            <objects>
+                <tabBarController id="EBv-JA-ie7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0z8-UO-Cds">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3Nl-qG-3hR" kind="relationship" relationship="viewControllers" id="yrm-YS-HgM"/>
+                        <segue destination="ndC-Nq-8tQ" kind="relationship" relationship="viewControllers" id="RYR-ue-XZP"/>
+                        <segue destination="1IQ-eP-XDb" kind="relationship" relationship="viewControllers" id="mMu-fC-8Bg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9q-5J-bmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="30"/>
+        </scene>
+        <!--Traduction-->
+        <scene sceneID="k8f-eL-mHs">
+            <objects>
+                <viewController id="ndC-Nq-8tQ" customClass="TranslationViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEx-wW-F9o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1bb-mv-oXq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Traduction" image="TranslationTabBarIcon" id="wYh-q4-nac"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrU-jW-NbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="30"/>
+        </scene>
+        <!--Météo-->
+        <scene sceneID="MVm-Xb-gR4">
+            <objects>
+                <viewController id="1IQ-eP-XDb" customClass="WeatherViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ODq-9b-vtx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TnG-LI-Rkh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Météo" image="WeatherTabBarIcon" id="mDp-sm-CM4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOA-L6-XnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="774"/>
+        </scene>
+        <!--Change-->
+        <scene sceneID="UQu-Z3-KAc">
+            <objects>
+                <viewController id="3Nl-qG-3hR" customClass="CurrencyViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9rg-0J-liw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VVl-v9-6tg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Change" image="CurrencyTabBarIcon" id="l1I-cd-2zC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3OF-rh-r4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="-687"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CurrencyTabBarIcon" width="26" height="13"/>
+        <image name="TranslationTabBarIcon" width="32" height="12"/>
+        <image name="WeatherTabBarIcon" width="30" height="29"/>
+    </resources>
 </document>

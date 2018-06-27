@@ -13,6 +13,8 @@
 		910AD80B20E36EE400C216D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910AD80A20E36EE400C216D7 /* Assets.xcassets */; };
 		910AD80E20E36EE400C216D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910AD80C20E36EE400C216D7 /* LaunchScreen.storyboard */; };
 		910AD81C20E3702100C216D7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 910AD81B20E3702100C216D7 /* Default-568h@2x.png */; };
+		910AD81F20E3717F00C216D7 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 910AD81D20E3717F00C216D7 /* ThirstySoftRegular.otf */; };
+		910AD82020E3717F00C216D7 /* Chalkboard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 910AD81E20E3717F00C216D7 /* Chalkboard.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		910AD80D20E36EE400C216D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		910AD80F20E36EE400C216D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		910AD81B20E3702100C216D7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		910AD81D20E3717F00C216D7 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		910AD81E20E3717F00C216D7 /* Chalkboard.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkboard.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		910AD81A20E3700600C216D7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				910AD81D20E3717F00C216D7 /* ThirstySoftRegular.otf */,
+				910AD81E20E3717F00C216D7 /* Chalkboard.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				910AD80E20E36EE400C216D7 /* LaunchScreen.storyboard in Resources */,
+				910AD82020E3717F00C216D7 /* Chalkboard.ttf in Resources */,
 				910AD81C20E3702100C216D7 /* Default-568h@2x.png in Resources */,
+				910AD81F20E3717F00C216D7 /* ThirstySoftRegular.otf in Resources */,
 				910AD80B20E36EE400C216D7 /* Assets.xcassets in Resources */,
 				910AD80920E36EE300C216D7 /* Main.storyboard in Resources */,
 			);
@@ -344,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GVF548G9W6;
-				INFOPLIST_FILE = LeBaluchon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LeBaluchon/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GVF548G9W6;
-				INFOPLIST_FILE = LeBaluchon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LeBaluchon/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

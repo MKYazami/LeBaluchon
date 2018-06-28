@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EBv-JA-ie7">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Chalkboard.ttf">
+            <string>Chalkboard</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="gKf-bO-jyw">
@@ -68,14 +73,85 @@
                     <view key="view" contentMode="scaleToFill" id="9rg-0J-liw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taux de change" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lT4-8w-hYG">
+                                <rect key="frame" x="16" y="25" width="288" height="45.5"/>
+                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="36"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sg6-E6-7P0" userLabel="Input Currency Stack View">
+                                <rect key="frame" x="16" y="117" width="288" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATk-Xl-Qde">
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-sl-A5o">
+                                        <rect key="frame" x="268" y="0.0" width="20" height="30"/>
+                                        <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yq9-6Z-64L"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bq2-HZ-Z70" userLabel="Result Currency Stack View">
+                                <rect key="frame" x="16" y="162" width="288" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6c-2O-hmN">
+                                        <rect key="frame" x="0.0" y="0.0" width="267.5" height="30"/>
+                                        <color key="backgroundColor" red="0.91764705882352937" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5j-qf-fs1">
+                                        <rect key="frame" x="270.5" y="0.0" width="17.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Ii-sk-Zuo"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlY-xk-kNK">
+                                <rect key="frame" x="16" y="456" width="288" height="53"/>
+                                <color key="backgroundColor" red="0.54113818130000002" green="0.84796863160000002" blue="0.47720510300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="32"/>
+                                <state key="normal" title="Convertir">
+                                    <color key="titleColor" red="0.023529411760000001" green="0.25098039220000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.023529411760000001" green="0.25098039220000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bq2-HZ-Z70" firstAttribute="leading" secondItem="VVl-v9-6tg" secondAttribute="leading" constant="16" id="1Mo-pp-0ZN"/>
+                            <constraint firstItem="nlY-xk-kNK" firstAttribute="leading" secondItem="VVl-v9-6tg" secondAttribute="leading" constant="16" id="6vA-ov-Gyw"/>
+                            <constraint firstItem="lT4-8w-hYG" firstAttribute="top" secondItem="VVl-v9-6tg" secondAttribute="top" constant="5" id="7NB-Cs-oBL"/>
+                            <constraint firstItem="VVl-v9-6tg" firstAttribute="bottom" secondItem="nlY-xk-kNK" secondAttribute="bottom" constant="10" id="Dh6-6l-rQm"/>
+                            <constraint firstItem="VVl-v9-6tg" firstAttribute="trailing" secondItem="bq2-HZ-Z70" secondAttribute="trailing" constant="16" id="KWy-cP-kDI"/>
+                            <constraint firstItem="bq2-HZ-Z70" firstAttribute="top" secondItem="sg6-E6-7P0" secondAttribute="bottom" constant="15" id="MWd-uE-tOR"/>
+                            <constraint firstItem="sg6-E6-7P0" firstAttribute="top" secondItem="lT4-8w-hYG" secondAttribute="bottom" constant="46.5" id="Yq2-o5-bSs"/>
+                            <constraint firstItem="VVl-v9-6tg" firstAttribute="trailing" secondItem="nlY-xk-kNK" secondAttribute="trailing" constant="16" id="abj-Xu-CX3"/>
+                            <constraint firstItem="lT4-8w-hYG" firstAttribute="leading" secondItem="VVl-v9-6tg" secondAttribute="leading" constant="16" id="alq-9L-gcV"/>
+                            <constraint firstItem="sg6-E6-7P0" firstAttribute="leading" secondItem="VVl-v9-6tg" secondAttribute="leading" constant="16" id="c9W-4S-crp"/>
+                            <constraint firstItem="VVl-v9-6tg" firstAttribute="trailing" secondItem="lT4-8w-hYG" secondAttribute="trailing" constant="16" id="cpY-El-y2l"/>
+                            <constraint firstItem="VVl-v9-6tg" firstAttribute="trailing" secondItem="sg6-E6-7P0" secondAttribute="trailing" constant="16" id="eGB-5k-CsM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VVl-v9-6tg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Change" image="CurrencyTabBarIcon" id="l1I-cd-2zC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3OF-rh-r4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="-687"/>
+            <point key="canvasLocation" x="1803.75" y="-687.67605633802816"/>
         </scene>
     </scenes>
     <resources>

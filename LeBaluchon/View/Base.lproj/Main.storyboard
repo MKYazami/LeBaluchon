@@ -145,13 +145,99 @@
                     <view key="view" contentMode="scaleToFill" id="ODq-9b-vtx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfA-nN-QPw">
+                                <rect key="frame" x="16" y="110" width="288" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ekg-qC-ID0">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-Vf-iqU">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="12 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-ov-L32">
+                                                <rect key="frame" x="0.0" y="25.5" width="238" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OccLightRain" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-bG-EpK">
+                                        <rect key="frame" x="238" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="U2J-cs-Leb"/>
+                                            <constraint firstAttribute="width" constant="50" id="hia-oa-NnD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="H3G-bG-EpK" secondAttribute="trailing" id="Cyo-G2-vor"/>
+                                    <constraint firstAttribute="bottom" secondItem="H3G-bG-EpK" secondAttribute="bottom" id="WCw-AY-qor"/>
+                                    <constraint firstItem="H3G-bG-EpK" firstAttribute="top" secondItem="WfA-nN-QPw" secondAttribute="top" id="YHY-ve-1Ft"/>
+                                    <constraint firstItem="H3G-bG-EpK" firstAttribute="leading" secondItem="ekg-qC-ID0" secondAttribute="trailing" id="sVA-9g-VKk"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sja-7x-sEE">
+                                <rect key="frame" x="16" y="45" width="288" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7GI-rS-m0D">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mF-aB-gsU">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="20 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOg-bV-Xgi">
+                                                <rect key="frame" x="0.0" y="25.5" width="50.5" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8mF-aB-gsU" firstAttribute="top" secondItem="7GI-rS-m0D" secondAttribute="top" id="HCS-B7-9rX"/>
+                                            <constraint firstAttribute="trailing" secondItem="8mF-aB-gsU" secondAttribute="trailing" id="J5I-mq-F2l"/>
+                                            <constraint firstItem="8mF-aB-gsU" firstAttribute="leading" secondItem="7GI-rS-m0D" secondAttribute="leading" id="f8Q-Dy-1mM"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudyDay" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-it-oJs">
+                                        <rect key="frame" x="238" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9hC-VC-p6p"/>
+                                            <constraint firstAttribute="width" constant="50" id="Jie-Je-wYy"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Uhk-it-oJs" firstAttribute="top" secondItem="Sja-7x-sEE" secondAttribute="top" id="fj3-cJ-NLU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uhk-it-oJs" secondAttribute="bottom" id="meE-wL-RLS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uhk-it-oJs" secondAttribute="trailing" id="pal-Su-vwt"/>
+                                    <constraint firstItem="Uhk-it-oJs" firstAttribute="leading" secondItem="7GI-rS-m0D" secondAttribute="trailing" id="xAG-CQ-dn3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01176470588" green="0.58431372550000005" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WfA-nN-QPw" firstAttribute="leading" secondItem="TnG-LI-Rkh" secondAttribute="leading" constant="16" id="Gac-wl-IvK"/>
+                            <constraint firstItem="Sja-7x-sEE" firstAttribute="top" secondItem="TnG-LI-Rkh" secondAttribute="top" constant="25" id="Qhx-OO-X1j"/>
+                            <constraint firstItem="WfA-nN-QPw" firstAttribute="top" secondItem="Sja-7x-sEE" secondAttribute="bottom" constant="15" id="b8v-1h-dVf"/>
+                            <constraint firstItem="Sja-7x-sEE" firstAttribute="leading" secondItem="TnG-LI-Rkh" secondAttribute="leading" constant="16" id="dJJ-3m-FAQ"/>
+                            <constraint firstItem="TnG-LI-Rkh" firstAttribute="trailing" secondItem="WfA-nN-QPw" secondAttribute="trailing" constant="16" id="f5c-IV-Zdw"/>
+                            <constraint firstItem="TnG-LI-Rkh" firstAttribute="trailing" secondItem="Sja-7x-sEE" secondAttribute="trailing" constant="16" id="htP-UR-RK4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TnG-LI-Rkh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Météo" image="WeatherTabBarIcon" id="mDp-sm-CM4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOA-L6-XnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="774"/>
+            <point key="canvasLocation" x="1803.75" y="773.23943661971828"/>
         </scene>
         <!--Change-->
         <scene sceneID="UQu-Z3-KAc">
@@ -246,6 +332,8 @@
     </scenes>
     <resources>
         <image name="CurrencyTabBarIcon" width="26" height="13"/>
+        <image name="OccLightRain" width="203" height="234"/>
+        <image name="PartlyCloudyDay" width="221" height="206"/>
         <image name="TranslationTabBarIcon" width="32" height="12"/>
         <image name="WeatherTabBarIcon" width="30" height="29"/>
     </resources>

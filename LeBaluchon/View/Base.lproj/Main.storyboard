@@ -37,18 +37,106 @@
         <!--Traduction-->
         <scene sceneID="k8f-eL-mHs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrU-jW-NbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ndC-Nq-8tQ" customClass="TranslationViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEx-wW-F9o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traduction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV6-jw-UMd">
+                                <rect key="frame" x="16" y="25" width="288" height="45.5"/>
+                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="36"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bK4-pZ-KcR" userLabel="Input Translation Stack View">
+                                <rect key="frame" x="16" y="87" width="288" height="90.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text à traduire" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-fN-gSN">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZvE-I3-9IL">
+                                        <rect key="frame" x="0.0" y="30.5" width="288" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZvE-I3-9IL" secondAttribute="trailing" id="5GA-li-0DN"/>
+                                    <constraint firstItem="ZvE-I3-9IL" firstAttribute="leading" secondItem="bK4-pZ-KcR" secondAttribute="leading" id="Ji4-BA-jl1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="S6c-YQ-Dld"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vrz-iw-mmO" userLabel="Translation Stack View">
+                                <rect key="frame" x="16" y="193" width="288" height="90.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traduction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRM-Xs-NRh">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UB-Pq-apw">
+                                        <rect key="frame" x="0.0" y="30.5" width="288" height="60"/>
+                                        <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="PR8-Bd-aP6"/>
+                                    <constraint firstAttribute="trailing" secondItem="0UB-Pq-apw" secondAttribute="trailing" id="RSD-eV-aBu"/>
+                                    <constraint firstItem="0UB-Pq-apw" firstAttribute="leading" secondItem="vrz-iw-mmO" secondAttribute="leading" id="USB-hL-xRo"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fs1-Y2-bdy">
+                                <rect key="frame" x="16" y="314" width="288" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="3nG-Oa-BOI"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijg-Wi-7yc">
+                                <rect key="frame" x="16" y="464" width="288" height="45"/>
+                                <color key="backgroundColor" red="0.54113818130000002" green="0.84796863160000002" blue="0.47720510300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="rTD-ft-TJ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="32"/>
+                                <state key="normal" title="Traduire">
+                                    <color key="titleColor" red="0.019607843140000001" green="0.43137254899999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.019607843140000001" green="0.43137254899999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vrz-iw-mmO" firstAttribute="leading" secondItem="1bb-mv-oXq" secondAttribute="leading" constant="16" id="6jO-Ci-7UB"/>
+                            <constraint firstItem="tV6-jw-UMd" firstAttribute="leading" secondItem="1bb-mv-oXq" secondAttribute="leading" constant="16" id="7YX-Qh-Ase"/>
+                            <constraint firstItem="1bb-mv-oXq" firstAttribute="bottom" secondItem="ijg-Wi-7yc" secondAttribute="bottom" constant="10" id="Fgy-Ut-h8I"/>
+                            <constraint firstItem="bK4-pZ-KcR" firstAttribute="top" secondItem="tV6-jw-UMd" secondAttribute="bottom" constant="16" id="IS1-29-zzI"/>
+                            <constraint firstItem="1bb-mv-oXq" firstAttribute="trailing" secondItem="vrz-iw-mmO" secondAttribute="trailing" constant="16" id="KB5-dF-fGQ"/>
+                            <constraint firstItem="vrz-iw-mmO" firstAttribute="top" secondItem="bK4-pZ-KcR" secondAttribute="bottom" constant="15" id="LaM-TX-TrJ"/>
+                            <constraint firstItem="tV6-jw-UMd" firstAttribute="top" secondItem="1bb-mv-oXq" secondAttribute="top" constant="5" id="N4Y-pi-dju"/>
+                            <constraint firstItem="fs1-Y2-bdy" firstAttribute="leading" secondItem="1bb-mv-oXq" secondAttribute="leading" constant="16" id="Rvx-kb-uUf"/>
+                            <constraint firstItem="1bb-mv-oXq" firstAttribute="trailing" secondItem="tV6-jw-UMd" secondAttribute="trailing" constant="16" id="U0w-ra-N88"/>
+                            <constraint firstItem="fs1-Y2-bdy" firstAttribute="top" secondItem="vrz-iw-mmO" secondAttribute="bottom" constant="30" id="UYu-AU-Kqf"/>
+                            <constraint firstItem="ijg-Wi-7yc" firstAttribute="leading" secondItem="1bb-mv-oXq" secondAttribute="leading" constant="16" id="Xim-x3-3zp"/>
+                            <constraint firstItem="1bb-mv-oXq" firstAttribute="trailing" secondItem="bK4-pZ-KcR" secondAttribute="trailing" constant="16" id="Xs2-dU-P8V"/>
+                            <constraint firstItem="bK4-pZ-KcR" firstAttribute="leading" secondItem="1bb-mv-oXq" secondAttribute="leading" constant="16" id="fZ7-GC-rGM"/>
+                            <constraint firstItem="ijg-Wi-7yc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fs1-Y2-bdy" secondAttribute="bottom" constant="60" id="gan-L8-M4c"/>
+                            <constraint firstItem="1bb-mv-oXq" firstAttribute="trailing" secondItem="fs1-Y2-bdy" secondAttribute="trailing" constant="16" id="hvB-nQ-mnn"/>
+                            <constraint firstItem="1bb-mv-oXq" firstAttribute="trailing" secondItem="ijg-Wi-7yc" secondAttribute="trailing" constant="16" id="tEE-0N-hCp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1bb-mv-oXq"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Traduction" image="TranslationTabBarIcon" id="wYh-q4-nac"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HrU-jW-NbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="30"/>
+            <point key="canvasLocation" x="1803.75" y="29.577464788732396"/>
         </scene>
         <!--Météo-->
         <scene sceneID="MVm-Xb-gR4">
@@ -57,7 +145,6 @@
                     <view key="view" contentMode="scaleToFill" id="ODq-9b-vtx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TnG-LI-Rkh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Météo" image="WeatherTabBarIcon" id="mDp-sm-CM4"/>
@@ -122,8 +209,11 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlY-xk-kNK">
-                                <rect key="frame" x="16" y="456" width="288" height="53"/>
+                                <rect key="frame" x="16" y="464" width="288" height="45"/>
                                 <color key="backgroundColor" red="0.54113818130000002" green="0.84796863160000002" blue="0.47720510300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="m3b-26-39N"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="32"/>
                                 <state key="normal" title="Convertir">
                                     <color key="titleColor" red="0.023529411760000001" green="0.25098039220000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

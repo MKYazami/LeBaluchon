@@ -111,6 +111,9 @@
                                     <color key="titleColor" red="0.019607843140000001" green="0.43137254899999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9ib-1L-p7w">
+                                <rect key="frame" x="150" y="476" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.43137254899999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -124,8 +127,10 @@
                             <constraint firstItem="fs1-Y2-bdy" firstAttribute="leading" secondItem="1bb-mv-oXq" secondAttribute="leading" constant="16" id="Rvx-kb-uUf"/>
                             <constraint firstItem="1bb-mv-oXq" firstAttribute="trailing" secondItem="tV6-jw-UMd" secondAttribute="trailing" constant="16" id="U0w-ra-N88"/>
                             <constraint firstItem="fs1-Y2-bdy" firstAttribute="top" secondItem="vrz-iw-mmO" secondAttribute="bottom" constant="30" id="UYu-AU-Kqf"/>
+                            <constraint firstItem="9ib-1L-p7w" firstAttribute="centerX" secondItem="hEx-wW-F9o" secondAttribute="centerX" id="Xfv-EO-rKM"/>
                             <constraint firstItem="ijg-Wi-7yc" firstAttribute="leading" secondItem="1bb-mv-oXq" secondAttribute="leading" constant="16" id="Xim-x3-3zp"/>
                             <constraint firstItem="1bb-mv-oXq" firstAttribute="trailing" secondItem="bK4-pZ-KcR" secondAttribute="trailing" constant="16" id="Xs2-dU-P8V"/>
+                            <constraint firstItem="9ib-1L-p7w" firstAttribute="centerY" secondItem="ijg-Wi-7yc" secondAttribute="centerY" id="eGJ-yN-Vbq"/>
                             <constraint firstItem="bK4-pZ-KcR" firstAttribute="leading" secondItem="1bb-mv-oXq" secondAttribute="leading" constant="16" id="fZ7-GC-rGM"/>
                             <constraint firstItem="ijg-Wi-7yc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fs1-Y2-bdy" secondAttribute="bottom" constant="60" id="gan-L8-M4c"/>
                             <constraint firstItem="1bb-mv-oXq" firstAttribute="trailing" secondItem="fs1-Y2-bdy" secondAttribute="trailing" constant="16" id="hvB-nQ-mnn"/>
@@ -146,27 +151,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfA-nN-QPw">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfA-nN-QPw" userLabel="Paris Stack View Stack View">
                                 <rect key="frame" x="16" y="110" width="288" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ekg-qC-ID0">
                                         <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-Vf-iqU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-Vf-iqU" userLabel="Paris Label">
                                                 <rect key="frame" x="0.0" y="0.0" width="238" height="25.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25.5" id="uAm-sg-GvX"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="12 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-ov-L32">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-ov-L32" userLabel="Paris Temperature">
                                                 <rect key="frame" x="0.0" y="25.5" width="238" height="24.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Euq-tk-nWg"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OccLightRain" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-bG-EpK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-bG-EpK" userLabel="Paris Icon Weather">
                                         <rect key="frame" x="238" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="U2J-cs-Leb"/>
@@ -181,32 +192,33 @@
                                     <constraint firstItem="H3G-bG-EpK" firstAttribute="leading" secondItem="ekg-qC-ID0" secondAttribute="trailing" id="sVA-9g-VKk"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sja-7x-sEE">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sja-7x-sEE" userLabel="Ney Work Stack View">
                                 <rect key="frame" x="16" y="45" width="288" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7GI-rS-m0D">
                                         <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mF-aB-gsU">
-                                                <rect key="frame" x="0.0" y="0.0" width="238" height="25.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mF-aB-gsU" userLabel="New York Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="25.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25.5" id="EOo-9E-wsn"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="20 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOg-bV-Xgi">
-                                                <rect key="frame" x="0.0" y="25.5" width="50.5" height="24.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOg-bV-Xgi" userLabel="New York Temperature">
+                                                <rect key="frame" x="0.0" y="25.5" width="70" height="24.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Zfu-pM-K9Y"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="8mF-aB-gsU" firstAttribute="top" secondItem="7GI-rS-m0D" secondAttribute="top" id="HCS-B7-9rX"/>
-                                            <constraint firstAttribute="trailing" secondItem="8mF-aB-gsU" secondAttribute="trailing" id="J5I-mq-F2l"/>
-                                            <constraint firstItem="8mF-aB-gsU" firstAttribute="leading" secondItem="7GI-rS-m0D" secondAttribute="leading" id="f8Q-Dy-1mM"/>
-                                        </constraints>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartlyCloudyDay" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-it-oJs">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-it-oJs" userLabel="New York Icon Weather">
                                         <rect key="frame" x="238" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="9hC-VC-p6p"/>
@@ -221,15 +233,20 @@
                                     <constraint firstItem="Uhk-it-oJs" firstAttribute="leading" secondItem="7GI-rS-m0D" secondAttribute="trailing" id="xAG-CQ-dn3"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="x64-Th-uPK">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.01176470588" green="0.58431372550000005" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WfA-nN-QPw" firstAttribute="leading" secondItem="TnG-LI-Rkh" secondAttribute="leading" constant="16" id="Gac-wl-IvK"/>
+                            <constraint firstItem="x64-Th-uPK" firstAttribute="centerY" secondItem="ODq-9b-vtx" secondAttribute="centerY" id="IdH-Gk-Qou"/>
                             <constraint firstItem="Sja-7x-sEE" firstAttribute="top" secondItem="TnG-LI-Rkh" secondAttribute="top" constant="25" id="Qhx-OO-X1j"/>
                             <constraint firstItem="WfA-nN-QPw" firstAttribute="top" secondItem="Sja-7x-sEE" secondAttribute="bottom" constant="15" id="b8v-1h-dVf"/>
                             <constraint firstItem="Sja-7x-sEE" firstAttribute="leading" secondItem="TnG-LI-Rkh" secondAttribute="leading" constant="16" id="dJJ-3m-FAQ"/>
                             <constraint firstItem="TnG-LI-Rkh" firstAttribute="trailing" secondItem="WfA-nN-QPw" secondAttribute="trailing" constant="16" id="f5c-IV-Zdw"/>
                             <constraint firstItem="TnG-LI-Rkh" firstAttribute="trailing" secondItem="Sja-7x-sEE" secondAttribute="trailing" constant="16" id="htP-UR-RK4"/>
+                            <constraint firstItem="x64-Th-uPK" firstAttribute="centerX" secondItem="ODq-9b-vtx" secondAttribute="centerX" id="pg4-Qm-Sx4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TnG-LI-Rkh"/>
                     </view>
@@ -305,12 +322,16 @@
                                     <color key="titleColor" red="0.023529411760000001" green="0.25098039220000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3GZ-3l-F9f">
+                                <rect key="frame" x="150" y="476" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.25098039220000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bq2-HZ-Z70" firstAttribute="leading" secondItem="VVl-v9-6tg" secondAttribute="leading" constant="16" id="1Mo-pp-0ZN"/>
                             <constraint firstItem="nlY-xk-kNK" firstAttribute="leading" secondItem="VVl-v9-6tg" secondAttribute="leading" constant="16" id="6vA-ov-Gyw"/>
                             <constraint firstItem="lT4-8w-hYG" firstAttribute="top" secondItem="VVl-v9-6tg" secondAttribute="top" constant="5" id="7NB-Cs-oBL"/>
+                            <constraint firstItem="3GZ-3l-F9f" firstAttribute="centerX" secondItem="9rg-0J-liw" secondAttribute="centerX" id="88G-zZ-M0N"/>
                             <constraint firstItem="VVl-v9-6tg" firstAttribute="bottom" secondItem="nlY-xk-kNK" secondAttribute="bottom" constant="10" id="Dh6-6l-rQm"/>
                             <constraint firstItem="VVl-v9-6tg" firstAttribute="trailing" secondItem="bq2-HZ-Z70" secondAttribute="trailing" constant="16" id="KWy-cP-kDI"/>
                             <constraint firstItem="bq2-HZ-Z70" firstAttribute="top" secondItem="sg6-E6-7P0" secondAttribute="bottom" constant="15" id="MWd-uE-tOR"/>
@@ -320,6 +341,7 @@
                             <constraint firstItem="sg6-E6-7P0" firstAttribute="leading" secondItem="VVl-v9-6tg" secondAttribute="leading" constant="16" id="c9W-4S-crp"/>
                             <constraint firstItem="VVl-v9-6tg" firstAttribute="trailing" secondItem="lT4-8w-hYG" secondAttribute="trailing" constant="16" id="cpY-El-y2l"/>
                             <constraint firstItem="VVl-v9-6tg" firstAttribute="trailing" secondItem="sg6-E6-7P0" secondAttribute="trailing" constant="16" id="eGB-5k-CsM"/>
+                            <constraint firstItem="3GZ-3l-F9f" firstAttribute="centerY" secondItem="nlY-xk-kNK" secondAttribute="centerY" id="gJR-Cl-sLp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VVl-v9-6tg"/>
                     </view>
@@ -332,8 +354,6 @@
     </scenes>
     <resources>
         <image name="CurrencyTabBarIcon" width="26" height="13"/>
-        <image name="OccLightRain" width="203" height="234"/>
-        <image name="PartlyCloudyDay" width="221" height="206"/>
         <image name="TranslationTabBarIcon" width="32" height="12"/>
         <image name="WeatherTabBarIcon" width="30" height="29"/>
     </resources>

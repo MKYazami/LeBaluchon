@@ -17,6 +17,7 @@
 		910AD82420E3784000C216D7 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AD82320E3784000C216D7 /* CurrencyViewController.swift */; };
 		910AD82620E3785E00C216D7 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AD82520E3785E00C216D7 /* TranslationViewController.swift */; };
 		910AD82820E3786E00C216D7 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AD82720E3786E00C216D7 /* WeatherViewController.swift */; };
+		9198DCE820E624AD00FCB5FA /* TranslationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DCE720E624AD00FCB5FA /* TranslationDirection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		910AD82320E3784000C216D7 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		910AD82520E3785E00C216D7 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		910AD82720E3786E00C216D7 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		9198DCE720E624AD00FCB5FA /* TranslationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationDirection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		910AD81620E36F8F00C216D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9198DCE720E624AD00FCB5FA /* TranslationDirection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				910AD82820E3786E00C216D7 /* WeatherViewController.swift in Sources */,
 				910AD82420E3784000C216D7 /* CurrencyViewController.swift in Sources */,
 				910AD80420E36EE300C216D7 /* AppDelegate.swift in Sources */,
+				9198DCE820E624AD00FCB5FA /* TranslationDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

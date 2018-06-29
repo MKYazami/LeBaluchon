@@ -22,7 +22,20 @@ class TranslationViewController: UIViewController {
     
 }
 
-// MARK: 
-extension TranslationViewController {
+// MARK: Picker View
+extension TranslationViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    //Set number of components
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    //Set number of row in the component
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return translationDirection.count
+    }
+    
+    //Display the titles of component
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return translationDirection[row]
+    }
 }

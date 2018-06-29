@@ -98,6 +98,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="3nG-Oa-BOI"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="ndC-Nq-8tQ" id="3q1-Sb-XNj"/>
+                                    <outlet property="delegate" destination="ndC-Nq-8tQ" id="jP3-F8-GUj"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijg-Wi-7yc">
                                 <rect key="frame" x="16" y="464" width="288" height="45"/>

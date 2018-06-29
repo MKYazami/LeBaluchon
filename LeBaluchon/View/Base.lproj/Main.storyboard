@@ -37,7 +37,6 @@
         <!--Traduction-->
         <scene sceneID="k8f-eL-mHs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HrU-jW-NbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ndC-Nq-8tQ" customClass="TranslationViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEx-wW-F9o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -62,7 +61,7 @@
                                         <rect key="frame" x="0.0" y="30.5" width="288" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
@@ -139,7 +138,11 @@
                         <viewLayoutGuide key="safeArea" id="1bb-mv-oXq"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Traduction" image="TranslationTabBarIcon" id="wYh-q4-nac"/>
+                    <connections>
+                        <outlet property="translationTextView" destination="ZvE-I3-9IL" id="PeQ-09-nZI"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrU-jW-NbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1803.75" y="29.577464788732396"/>
         </scene>
@@ -277,7 +280,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="267" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="23"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="3Nl-qG-3hR" id="kCR-Yl-7vM"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-sl-A5o">
                                         <rect key="frame" x="268" y="0.0" width="20" height="30"/>
@@ -346,6 +352,9 @@
                         <viewLayoutGuide key="safeArea" id="VVl-v9-6tg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Change" image="CurrencyTabBarIcon" id="l1I-cd-2zC"/>
+                    <connections>
+                        <outlet property="currencyTextField" destination="ATk-Xl-Qde" id="yQt-OP-SMV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3OF-rh-r4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

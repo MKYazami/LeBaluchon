@@ -20,6 +20,7 @@
 		9198DCE820E624AD00FCB5FA /* TranslationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DCE720E624AD00FCB5FA /* TranslationDirection.swift */; };
 		9198DD1120E7D1F800FCB5FA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1020E7D1F800FCB5FA /* Currency.swift */; };
 		9198DD1320E7D28500FCB5FA /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1220E7D28500FCB5FA /* Rate.swift */; };
+		9198DD1520E7D30D00FCB5FA /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9198DCE720E624AD00FCB5FA /* TranslationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationDirection.swift; sourceTree = "<group>"; };
 		9198DD1020E7D1F800FCB5FA /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		9198DD1220E7D28500FCB5FA /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				9198DD1020E7D1F800FCB5FA /* Currency.swift */,
 				9198DD1220E7D28500FCB5FA /* Rate.swift */,
+				9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */,
 			);
 			path = Currency;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				910AD82620E3785E00C216D7 /* TranslationViewController.swift in Sources */,
 				910AD82820E3786E00C216D7 /* WeatherViewController.swift in Sources */,
 				9198DD1320E7D28500FCB5FA /* Rate.swift in Sources */,
+				9198DD1520E7D30D00FCB5FA /* CurrencyService.swift in Sources */,
 				910AD82420E3784000C216D7 /* CurrencyViewController.swift in Sources */,
 				910AD80420E36EE300C216D7 /* AppDelegate.swift in Sources */,
 				9198DCE820E624AD00FCB5FA /* TranslationDirection.swift in Sources */,

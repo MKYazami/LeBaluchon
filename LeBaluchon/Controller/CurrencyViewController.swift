@@ -9,8 +9,18 @@
 import UIKit
 
 class CurrencyViewController: UIViewController {
+    // MARK: Outlets
     @IBOutlet weak var currencyTextField: UITextField!
-
+    @IBOutlet weak var currencyResultLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var convertBtn: UIButton!
+    
+    // MARK: Action
+    @IBAction func convert() {
+        
+    }
+    
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }

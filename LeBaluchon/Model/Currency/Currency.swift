@@ -17,8 +17,14 @@ struct Currency: Decodable {
         case rates
     }
     
-    static func calculateCurrency(baseCurrencyRate: Double, rateTarget: Double) -> Double {
-        let currency = baseCurrencyRate * rateTarget
+    /// Calcul the currency from base currency & rate target
+    ///
+    /// - Parameters:
+    ///   - baseCurrency: Base currency
+    ///   - rateTarget: The rate that allows us to calculate the currency
+    /// - Returns: Calculated currency
+    static func calculateCurrency(baseCurrency: Double, rateTarget: Double) -> Double {
+        let currency = baseCurrency * rateTarget
         
         return currency
     }

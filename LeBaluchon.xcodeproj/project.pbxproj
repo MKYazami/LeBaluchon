@@ -18,6 +18,8 @@
 		910AD82620E3785E00C216D7 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AD82520E3785E00C216D7 /* TranslationViewController.swift */; };
 		910AD82820E3786E00C216D7 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AD82720E3786E00C216D7 /* WeatherViewController.swift */; };
 		9198DCE820E624AD00FCB5FA /* TranslationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DCE720E624AD00FCB5FA /* TranslationDirection.swift */; };
+		9198DD1120E7D1F800FCB5FA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1020E7D1F800FCB5FA /* Currency.swift */; };
+		9198DD1320E7D28500FCB5FA /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1220E7D28500FCB5FA /* Rate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		910AD82520E3785E00C216D7 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		910AD82720E3786E00C216D7 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		9198DCE720E624AD00FCB5FA /* TranslationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationDirection.swift; sourceTree = "<group>"; };
+		9198DD1020E7D1F800FCB5FA /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		9198DD1220E7D28500FCB5FA /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		910AD81620E36F8F00C216D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9198DCE920E6847000FCB5FA /* Currency */,
 				9198DCE720E624AD00FCB5FA /* TranslationDirection.swift */,
 			);
 			path = Model;
@@ -120,6 +125,15 @@
 				910AD81E20E3717F00C216D7 /* Chalkboard.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9198DCE920E6847000FCB5FA /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				9198DD1020E7D1F800FCB5FA /* Currency.swift */,
+				9198DD1220E7D28500FCB5FA /* Rate.swift */,
+			);
+			path = Currency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9198DD1120E7D1F800FCB5FA /* Currency.swift in Sources */,
 				910AD82620E3785E00C216D7 /* TranslationViewController.swift in Sources */,
 				910AD82820E3786E00C216D7 /* WeatherViewController.swift in Sources */,
+				9198DD1320E7D28500FCB5FA /* Rate.swift in Sources */,
 				910AD82420E3784000C216D7 /* CurrencyViewController.swift in Sources */,
 				910AD80420E36EE300C216D7 /* AppDelegate.swift in Sources */,
 				9198DCE820E624AD00FCB5FA /* TranslationDirection.swift in Sources */,

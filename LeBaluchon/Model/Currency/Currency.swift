@@ -17,6 +17,10 @@ struct Currency: Decodable {
         case rates
     }
     
+}
+
+extension Currency {
+    
     /// Calcul the currency from base currency & rate target
     ///
     /// - Parameters:

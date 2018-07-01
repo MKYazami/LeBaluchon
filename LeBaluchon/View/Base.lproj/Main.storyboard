@@ -373,7 +373,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="continue"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="send"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="3Nl-qG-3hR" id="kCR-Yl-7vM"/>
                                                 </connections>
@@ -464,9 +464,11 @@
                     <navigationItem key="navigationItem" title="Taux de change" largeTitleDisplayMode="always" id="Umr-be-ZDE"/>
                     <connections>
                         <outlet property="activityIndicator" destination="3GZ-3l-F9f" id="RsV-YM-wWx"/>
+                        <outlet property="baseCurrencyLabel" destination="cdi-sl-A5o" id="xGB-uJ-yac"/>
                         <outlet property="convertBtn" destination="nlY-xk-kNK" id="XBD-ij-7qS"/>
                         <outlet property="currencyResultLabel" destination="I6c-2O-hmN" id="zqk-uJ-qxr"/>
                         <outlet property="currencyTextField" destination="ATk-Xl-Qde" id="yQt-OP-SMV"/>
+                        <outlet property="targetCurrencyLabel" destination="m5j-qf-fs1" id="i33-1g-XOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3OF-rh-r4o" userLabel="First Responder" sceneMemberID="firstResponder"/>

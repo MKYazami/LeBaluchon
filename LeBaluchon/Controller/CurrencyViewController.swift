@@ -19,17 +19,20 @@ class CurrencyViewController: UIViewController {
     
     // MARK: Action
     @IBAction func convert() {
+        toogleActivityIndicator(shown: true)
         getCalculatedCurrency()
     }
     
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.toogleActivityIndicator(shown: false)
     }
     
     /// Get data from the Model
     private func getCalculatedCurrency() {
         CurrencyService.sharedInstance.getCurrency { (success, currency) in
+            self.toogleActivityIndicator(shown: false)
             if success, let currency = currency {
                 self.updateDisplay(currency: currency)
             } else {
@@ -70,6 +73,11 @@ class CurrencyViewController: UIViewController {
     private func resetDisplay() {
         currencyTextField.text = ""
         currencyResultLabel.text = ""
+    }
+    
+    private func toogleActivityIndicator(shown: Bool) {
+        activityIndicator.isHidden = !shown
+        convertBtn.isHidden = shown
     }
     
     /// Display pop up to warn the user

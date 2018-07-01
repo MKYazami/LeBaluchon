@@ -183,8 +183,8 @@
                                     <color key="titleColor" red="0.019607843140000001" green="0.43137254899999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9ib-1L-p7w">
-                                <rect key="frame" x="150" y="476" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="9ib-1L-p7w">
+                                <rect key="frame" x="142" y="468" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.43137254899999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -306,8 +306,8 @@
                                     <constraint firstItem="Uhk-it-oJs" firstAttribute="leading" secondItem="7GI-rS-m0D" secondAttribute="trailing" id="xAG-CQ-dn3"/>
                                 </constraints>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="x64-Th-uPK">
-                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="x64-Th-uPK">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.01176470588" green="0.58431372550000005" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -351,8 +351,8 @@
                                     <action selector="convert" destination="3Nl-qG-3hR" eventType="touchUpInside" id="EpE-g4-xcm"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3GZ-3l-F9f">
-                                <rect key="frame" x="151.5" y="476" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3GZ-3l-F9f">
+                                <rect key="frame" x="143" y="468" width="37" height="37"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6zR-VQ-JsT" userLabel="Input Currency Stack View">
                                 <rect key="frame" x="16" y="80" width="291" height="54"/>

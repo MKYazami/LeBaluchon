@@ -21,7 +21,18 @@
 		9198DD1120E7D1F800FCB5FA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1020E7D1F800FCB5FA /* Currency.swift */; };
 		9198DD1320E7D28500FCB5FA /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1220E7D28500FCB5FA /* Rate.swift */; };
 		9198DD1520E7D30D00FCB5FA /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */; };
+		9198DD1D20EA220C00FCB5FA /* LeBaluchonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1C20EA220C00FCB5FA /* LeBaluchonTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9198DD1F20EA220C00FCB5FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 910AD7F820E36EE200C216D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 910AD7FF20E36EE200C216D7;
+			remoteInfo = LeBaluchon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		910AD80020E36EE200C216D7 /* LeBaluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeBaluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,10 +51,20 @@
 		9198DD1020E7D1F800FCB5FA /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		9198DD1220E7D28500FCB5FA /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
+		9198DD1A20EA220C00FCB5FA /* LeBaluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9198DD1C20EA220C00FCB5FA /* LeBaluchonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBaluchonTests.swift; sourceTree = "<group>"; };
+		9198DD1E20EA220C00FCB5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		910AD7FD20E36EE200C216D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9198DD1720EA220C00FCB5FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				910AD80220E36EE200C216D7 /* LeBaluchon */,
+				9198DD1B20EA220C00FCB5FA /* LeBaluchonTests */,
 				910AD80120E36EE200C216D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				910AD80020E36EE200C216D7 /* LeBaluchon.app */,
+				9198DD1A20EA220C00FCB5FA /* LeBaluchonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +162,15 @@
 			path = Currency;
 			sourceTree = "<group>";
 		};
+		9198DD1B20EA220C00FCB5FA /* LeBaluchonTests */ = {
+			isa = PBXGroup;
+			children = (
+				9198DD1C20EA220C00FCB5FA /* LeBaluchonTests.swift */,
+				9198DD1E20EA220C00FCB5FA /* Info.plist */,
+			);
+			path = LeBaluchonTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +192,24 @@
 			productReference = 910AD80020E36EE200C216D7 /* LeBaluchon.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9198DD1920EA220C00FCB5FA /* LeBaluchonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9198DD2120EA220C00FCB5FA /* Build configuration list for PBXNativeTarget "LeBaluchonTests" */;
+			buildPhases = (
+				9198DD1620EA220C00FCB5FA /* Sources */,
+				9198DD1720EA220C00FCB5FA /* Frameworks */,
+				9198DD1820EA220C00FCB5FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9198DD2020EA220C00FCB5FA /* PBXTargetDependency */,
+			);
+			name = LeBaluchonTests;
+			productName = LeBaluchonTests;
+			productReference = 9198DD1A20EA220C00FCB5FA /* LeBaluchonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +222,10 @@
 				TargetAttributes = {
 					910AD7FF20E36EE200C216D7 = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					9198DD1920EA220C00FCB5FA = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 910AD7FF20E36EE200C216D7;
 					};
 				};
 			};
@@ -189,6 +243,7 @@
 			projectRoot = "";
 			targets = (
 				910AD7FF20E36EE200C216D7 /* LeBaluchon */,
+				9198DD1920EA220C00FCB5FA /* LeBaluchonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,6 +259,13 @@
 				910AD81F20E3717F00C216D7 /* ThirstySoftRegular.otf in Resources */,
 				910AD80B20E36EE400C216D7 /* Assets.xcassets in Resources */,
 				910AD80920E36EE300C216D7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9198DD1820EA220C00FCB5FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +304,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9198DD1620EA220C00FCB5FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9198DD1D20EA220C00FCB5FA /* LeBaluchonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9198DD2020EA220C00FCB5FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 910AD7FF20E36EE200C216D7 /* LeBaluchon */;
+			targetProxy = 9198DD1F20EA220C00FCB5FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		910AD80720E36EE300C216D7 /* Main.storyboard */ = {
@@ -414,6 +492,46 @@
 			};
 			name = Release;
 		};
+		9198DD2220EA220C00FCB5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GVF548G9W6;
+				INFOPLIST_FILE = LeBaluchonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.medev.LeBaluchonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeBaluchon.app/LeBaluchon";
+			};
+			name = Debug;
+		};
+		9198DD2320EA220C00FCB5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GVF548G9W6;
+				INFOPLIST_FILE = LeBaluchonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.medev.LeBaluchonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeBaluchon.app/LeBaluchon";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -431,6 +549,15 @@
 			buildConfigurations = (
 				910AD81320E36EE400C216D7 /* Debug */,
 				910AD81420E36EE400C216D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9198DD2120EA220C00FCB5FA /* Build configuration list for PBXNativeTarget "LeBaluchonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9198DD2220EA220C00FCB5FA /* Debug */,
+				9198DD2320EA220C00FCB5FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

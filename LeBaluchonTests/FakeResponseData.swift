@@ -20,8 +20,8 @@ class FakeResponseData {
     static let currencyIncorrectData = "incorrectData".data(using: .utf8)
     
     // MARK: Fake Responses
-    let reponseOK = HTTPURLResponse(url: URL(string: "https://www.google.fr")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
-    let reponseKO = HTTPURLResponse(url: URL(string: "https://www.google.fr")!, statusCode: 500, httpVersion: nil, headerFields: nil)!
+    static let reponseOK = HTTPURLResponse(url: URL(string: "https://www.google.fr")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
+    static let reponseKO = HTTPURLResponse(url: URL(string: "https://www.google.fr")!, statusCode: 500, httpVersion: nil, headerFields: nil)!
     
     // MARK: Fake Error
     class CurrencyError: Error {}

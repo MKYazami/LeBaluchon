@@ -13,7 +13,7 @@ class URLSessionFake: URLSession {
     var response: URLResponse?
     var error: Error?
     
-    init(data: Data, response: URLResponse, error: Error) {
+    init(data: Data?, response: URLResponse?, error: Error?) {
         self.data = data
         self.response = response
         self.error = error

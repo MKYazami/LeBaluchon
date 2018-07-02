@@ -7,29 +7,107 @@
 //
 
 import XCTest
+@testable import LeBaluchon
 
 class CurrencyServiceTestCase: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetCurrencyShouldPostFailedCallBackIfError() {
+        // Given
+        let currencyService = CurrencyService(currencySession:
+            URLSessionFake(data: FakeResponseData.currencyCorrectData, response: FakeResponseData.reponseOK, error: FakeResponseData.error))
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        // When
+        currencyService.getCurrency { (success, currency) in
+            // Then
+            XCTAssertFalse(success)
+            XCTAssertNil(currency)
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 0.01)
+        
+    }
+    
+    func testGetCurrencyShouldPostFailedCallBackIfNoData() {
+        // Given
+        let currencyService = CurrencyService(currencySession:
+            URLSessionFake(data: nil, response: nil, error: nil))
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        // When
+        currencyService.getCurrency { (success, currency) in
+            // Then
+            XCTAssertFalse(success)
+            XCTAssertNil(currency)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 0.01)
+        
+    }
+    
+    func testGetCurrencyShouldPostFailedCallBackIfIncorrectResponse() {
+        // Given
+        let currencyService = CurrencyService(currencySession:
+            URLSessionFake(data: FakeResponseData.currencyCorrectData, response: FakeResponseData.reponseKO, error: nil))
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        // When
+        currencyService.getCurrency { (success, currency) in
+            // Then
+            XCTAssertFalse(success)
+            XCTAssertNil(currency)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 0.01)
+        
+    }
+    
+    func testGetCurrencyShouldPostFailedCallBackIfIncorrectData() {
+        // Given
+        let currencyService = CurrencyService(currencySession:
+            URLSessionFake(data: FakeResponseData.currencyIncorrectData, response: FakeResponseData.reponseOK, error: nil))
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        // When
+        currencyService.getCurrency { (success, currency) in
+            // Then
+            XCTAssertFalse(success)
+            XCTAssertNil(currency)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 0.01)
+        
+    }
+    
+    func testGetCurrencyShouldPostFailedCallBackIfINoErrorAndCorrectData() {
+        // Given
+        let currencyService = CurrencyService(currencySession:
+            URLSessionFake(data: FakeResponseData.currencyCorrectData, response: FakeResponseData.reponseOK, error: nil))
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        // When
+        currencyService.getCurrency { (success, currency) in
+            // Then
+            
+            // These elements are copied from Currency.json to compare them
+            let baseCurrency = "EUR"
+            let usdRate: Double = 1.164955
+            
+            XCTAssertTrue(success)
+            XCTAssertNotNil(currency)
+            
+            XCTAssertEqual(baseCurrency, currency?.baseCurrency)
+            XCTAssertEqual(usdRate, currency?.rates?.usd)
+            
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 0.01)
+        
     }
     
 }

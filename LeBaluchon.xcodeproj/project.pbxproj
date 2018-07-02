@@ -169,12 +169,20 @@
 		9198DD1B20EA220C00FCB5FA /* LeBaluchonTests */ = {
 			isa = PBXGroup;
 			children = (
-				9198DD2420EA22EB00FCB5FA /* CurrencyServiceTestCase.swift */,
-				9198DD2620EA234A00FCB5FA /* Currency.json */,
+				9198DD2A20EA2A6300FCB5FA /* CurrencyTests */,
 				9198DD1E20EA220C00FCB5FA /* Info.plist */,
-				9198DD2820EA23D100FCB5FA /* FakeResponseData.swift */,
 			);
 			path = LeBaluchonTests;
+			sourceTree = "<group>";
+		};
+		9198DD2A20EA2A6300FCB5FA /* CurrencyTests */ = {
+			isa = PBXGroup;
+			children = (
+				9198DD2420EA22EB00FCB5FA /* CurrencyServiceTestCase.swift */,
+				9198DD2620EA234A00FCB5FA /* Currency.json */,
+				9198DD2820EA23D100FCB5FA /* FakeResponseData.swift */,
+			);
+			path = CurrencyTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

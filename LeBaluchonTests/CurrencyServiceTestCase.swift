@@ -1,5 +1,5 @@
 //
-//  LeBaluchonTests.swift
+//  CurrencyServiceTestCase.swift
 //  LeBaluchonTests
 //
 //  Created by Mehdi on 02/07/2018.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class LeBaluchonTests: XCTestCase {
+class CurrencyServiceTestCase: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -21,7 +21,7 @@
 		9198DD1120E7D1F800FCB5FA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1020E7D1F800FCB5FA /* Currency.swift */; };
 		9198DD1320E7D28500FCB5FA /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1220E7D28500FCB5FA /* Rate.swift */; };
 		9198DD1520E7D30D00FCB5FA /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */; };
-		9198DD1D20EA220C00FCB5FA /* LeBaluchonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1C20EA220C00FCB5FA /* LeBaluchonTests.swift */; };
+		9198DD2520EA22EB00FCB5FA /* CurrencyServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2420EA22EB00FCB5FA /* CurrencyServiceTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		9198DD1220E7D28500FCB5FA /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		9198DD1A20EA220C00FCB5FA /* LeBaluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9198DD1C20EA220C00FCB5FA /* LeBaluchonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBaluchonTests.swift; sourceTree = "<group>"; };
 		9198DD1E20EA220C00FCB5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9198DD2420EA22EB00FCB5FA /* CurrencyServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyServiceTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,7 @@
 		9198DD1B20EA220C00FCB5FA /* LeBaluchonTests */ = {
 			isa = PBXGroup;
 			children = (
-				9198DD1C20EA220C00FCB5FA /* LeBaluchonTests.swift */,
+				9198DD2420EA22EB00FCB5FA /* CurrencyServiceTestCase.swift */,
 				9198DD1E20EA220C00FCB5FA /* Info.plist */,
 			);
 			path = LeBaluchonTests;
@@ -225,6 +225,7 @@
 					};
 					9198DD1920EA220C00FCB5FA = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = 910AD7FF20E36EE200C216D7;
 					};
 				};
@@ -308,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9198DD1D20EA220C00FCB5FA /* LeBaluchonTests.swift in Sources */,
+				9198DD2520EA22EB00FCB5FA /* CurrencyServiceTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GVF548G9W6;
 				INFOPLIST_FILE = LeBaluchonTests/Info.plist;
@@ -506,6 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.medev.LeBaluchonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeBaluchon.app/LeBaluchon";
@@ -516,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GVF548G9W6;
 				INFOPLIST_FILE = LeBaluchonTests/Info.plist;

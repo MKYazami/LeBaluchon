@@ -25,6 +25,7 @@
 		9198DD2720EA234A00FCB5FA /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 9198DD2620EA234A00FCB5FA /* Currency.json */; };
 		9198DD2920EA23D100FCB5FA /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2820EA23D100FCB5FA /* FakeResponseData.swift */; };
 		9198DD2C20EA3B8600FCB5FA /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2B20EA3B8600FCB5FA /* URLSessionFake.swift */; };
+		9198DD2E20EA919900FCB5FA /* CurrencyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2D20EA919900FCB5FA /* CurrencyTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		9198DD2620EA234A00FCB5FA /* Currency.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Currency.json; sourceTree = "<group>"; };
 		9198DD2820EA23D100FCB5FA /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 		9198DD2B20EA3B8600FCB5FA /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		9198DD2D20EA919900FCB5FA /* CurrencyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9198DD2420EA22EB00FCB5FA /* CurrencyServiceTestCase.swift */,
+				9198DD2D20EA919900FCB5FA /* CurrencyTestCase.swift */,
 				9198DD2620EA234A00FCB5FA /* Currency.json */,
 			);
 			path = CurrencyTests;
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9198DD2E20EA919900FCB5FA /* CurrencyTestCase.swift in Sources */,
 				9198DD2520EA22EB00FCB5FA /* CurrencyServiceTestCase.swift in Sources */,
 				9198DD2C20EA3B8600FCB5FA /* URLSessionFake.swift in Sources */,
 				9198DD2920EA23D100FCB5FA /* FakeResponseData.swift in Sources */,

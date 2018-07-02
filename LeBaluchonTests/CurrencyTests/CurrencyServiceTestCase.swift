@@ -93,7 +93,7 @@ class CurrencyServiceTestCase: XCTestCase {
         currencyService.getCurrency { (success, currency) in
             // Then
             
-            // These elements are copied from Currency.json to compare them
+            // These elements are copied from "Currency.json" to compare them
             let baseCurrency = "EUR"
             let usdRate: Double = 1.164955
             

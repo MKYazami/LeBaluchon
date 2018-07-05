@@ -33,3 +33,11 @@ extension Currency {
         return currency
     }
 }
+
+struct Rate: Decodable {
+    let usd: Double
+    
+    private enum CodingKeys: String, CodingKey {
+        case usd = "USD"
+    }
+}

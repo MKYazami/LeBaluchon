@@ -45,7 +45,7 @@ class CurrencyViewController: UIViewController {
     ///
     /// - Parameter currency: Currency get from the Model to update into the view
     private func updateDisplay(currency: Currency) {
-        guard let inputCurrency = currencyTextField.text else {
+        guard let inputCurrency = currencyTextField.text, !inputCurrency.isEmpty else {
             alertMessage(title: "Données manquante", message: "Merci de bien vouloir entrer une donnée !")
             resetDisplay()
             return

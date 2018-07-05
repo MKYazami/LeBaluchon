@@ -54,7 +54,7 @@ class TranslationService {
     
     private func getTranslationURL(textToTranslate: String, languageTranslationPair: String) -> URL? {
         // Sample of static URL for understanding purpose
-        // https://www.googleapis.com/language/translate/v2?key=AIzaSyCQjn22TDWEKEcyoTHhfb2sGFT3H7Z-cNA&source=fr&target=en&q=Text_To_Translate
+        // https://www.googleapis.com/language/translate/v2?key=AIzaSyCQjn22TDWEKEcyoTHhfb2sGFT3H7Z-cNA&source=fr&target=en&format=text&q=Text_To_Translate
         
         //URL components
         guard let textTotranslateInURL = textToTranslate.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
@@ -66,8 +66,11 @@ class TranslationService {
         let target = souceAndTarget.target
         let baseUrl = "https://www.googleapis.com/language/translate/v2?"
         let apiKey = "AIzaSyCQjn22TDWEKEcyoTHhfb2sGFT3H7Z-cNA"
+        // This parameter is important to set it at "text" (default is html value)
+        // This value avoid to get html entities for some specials characters (as l&#39;API instead of l'API)
+        let format = "text"
         
-        let urlString = "\(baseUrl)key=\(apiKey)&source=\(source)&target=\(target)&q=\(textTotranslateInURL)"
+        let urlString = "\(baseUrl)key=\(apiKey)&source=\(source)&target=\(target)&format=\(format)&q=\(textTotranslateInURL)"
         
         let url = URL(string: urlString)
         

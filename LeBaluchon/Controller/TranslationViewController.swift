@@ -31,11 +31,11 @@ extension TranslationViewController: UIPickerViewDataSource, UIPickerViewDelegat
     
     //Set number of row in the component
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return translationDirection.count
+        return languageTranslationPair.count
     }
     
     //Display the titles of component
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return translationDirection[row]
+        return languageTranslationPair[row]
     }
 }

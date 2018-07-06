@@ -81,25 +81,42 @@ class TranslationServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
-    func testGetTranslationShoulPostdSuccessCallBackIfNoErrorAndCorrectData() {
+    func testGetTranslationShoulPostdFailedCallBackIfIncorrectLanguageTranslationPair() {
         // Given
         let translationService = TranslationService(translationSession: URLSessionFake(
             data: FakeResponseData.translationCorrectData, response: FakeResponseData.reponseOK, error: nil))
         
         let expectation = XCTestExpectation(description: "Wait for queue change")
         // When
-        translationService.getTranslation(textTotranslate: "une traduction", languageTranslationPair: "Français -> Anglais") { (success, translatedText) in
+        translationService.getTranslation(textTotranslate: "a translation", languageTranslationPair: "Anglais -> Allemand") { (success, translatedText) in
             //Then
-            let translatedTextToCompare = "a translation"
-            XCTAssertTrue(success)
-            XCTAssertNotNil(translatedText?.translatedText)
-            
-            XCTAssertEqual(translatedTextToCompare, translatedText?.translatedText)
-            
+            XCTAssertFalse(success)
+            XCTAssertNil(translatedText?.translatedText)
             expectation.fulfill()
         }
         
         wait(for: [expectation], timeout: 0.01)
     }
+    
+//    func testGetTranslationShoulPostdSuccessCallBackIfNoErrorAndCorrectData() {
+//        // Given
+//        let translationService = TranslationService(translationSession: URLSessionFake(
+//            data: FakeResponseData.translationCorrectData, response: FakeResponseData.reponseOK, error: nil))
+//
+//        let expectation = XCTestExpectation(description: "Wait for queue change")
+//        // When
+//        translationService.getTranslation(textTotranslate: "une traduction", languageTranslationPair: "Français -> Anglais") { (success, translatedText) in
+//            //Then
+//            let translatedTextToCompare = "a translation"
+//            XCTAssertTrue(success)
+//            XCTAssertNotNil(translatedText?.translatedText)
+//
+//            XCTAssertEqual(translatedTextToCompare, translatedText?.translatedText)
+//
+//            expectation.fulfill()
+//        }
+//
+//        wait(for: [expectation], timeout: 0.01)
+//    }
     
 }

@@ -69,8 +69,10 @@ class TranslationService {
         }
         
         let souceAndTarget = setSourceAndTargetLanguages(languageTranslationPair: languageTranslationPair)
-        let source = souceAndTarget.source
-        let target = souceAndTarget.target
+        guard let source = souceAndTarget.source, let target = souceAndTarget.target else {
+            return nil
+        }
+        
         let baseUrl = "https://www.googleapis.com/language/translate/v2?"
         let apiKey = "AIzaSyCQjn22TDWEKEcyoTHhfb2sGFT3H7Z-cNA"
         // This parameter is important to set it at "text" (default is html value)
@@ -84,15 +86,23 @@ class TranslationService {
         return url
     }
     
-    private func setSourceAndTargetLanguages(languageTranslationPair: String) -> (source: String, target: String) {
+    /// Set the source & target language depending on language translation pair
+    ///
+    /// - Parameter languageTranslationPair: Language pair describing in languageTranslationPair array
+    /// - Returns: source & target bigram language according to the google translation API
+    private func setSourceAndTargetLanguages(languageTranslationPair: String) -> (source: String?, target: String?) {
         switch languageTranslationPair {
         case "Français -> Anglais":
             let source = "fr"
             let target = "en"
             return (source, target)
-        default:
+        case "Anglais -> Français":
             let source = "en"
             let target = "fr"
+            return (source, target)
+        default:
+            let source: String? = nil
+            let target: String? = nil
             return (source, target)
         }
     }

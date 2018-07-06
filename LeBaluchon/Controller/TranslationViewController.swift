@@ -11,7 +11,7 @@ import UIKit
 class TranslationViewController: UIViewController {
     // MARK: Outltes
     @IBOutlet weak var translationTextView: UITextView!
-    @IBOutlet weak var translatedTextLabel: UILabel!
+    @IBOutlet weak var translatedTextView: UITextView!
     @IBOutlet weak var languageTranslationPairPickerView: UIPickerView!
     @IBOutlet weak var translateBtn: UIButton!
     
@@ -47,7 +47,7 @@ class TranslationViewController: UIViewController {
     }
     
     private func updateDisplay(textTranslated: String) {
-        translatedTextLabel.text = textTranslated
+        translatedTextView.text = textTranslated
     }
     
     private func getLanguagePair() -> String {

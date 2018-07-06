@@ -148,18 +148,17 @@
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UB-Pq-apw">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qar-A3-kfD">
                                         <rect key="frame" x="0.0" y="24" width="288" height="66"/>
-                                        <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qar-A3-kfD" secondAttribute="trailing" id="Dvj-I3-sF7"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="PR8-Bd-aP6"/>
-                                    <constraint firstAttribute="trailing" secondItem="0UB-Pq-apw" secondAttribute="trailing" id="RSD-eV-aBu"/>
-                                    <constraint firstItem="0UB-Pq-apw" firstAttribute="leading" secondItem="vrz-iw-mmO" secondAttribute="leading" id="USB-hL-xRo"/>
+                                    <constraint firstItem="qar-A3-kfD" firstAttribute="leading" secondItem="vrz-iw-mmO" secondAttribute="leading" id="swP-eF-z52"/>
                                 </constraints>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fs1-Y2-bdy">
@@ -215,7 +214,7 @@
                         <outlet property="activityIndicator" destination="9ib-1L-p7w" id="jdG-DS-Guk"/>
                         <outlet property="languageTranslationPairPickerView" destination="fs1-Y2-bdy" id="eWZ-aL-jKL"/>
                         <outlet property="translateBtn" destination="ijg-Wi-7yc" id="hnS-pa-ipp"/>
-                        <outlet property="translatedTextLabel" destination="0UB-Pq-apw" id="o2Y-h0-JbN"/>
+                        <outlet property="translatedTextView" destination="qar-A3-kfD" id="A0d-K7-MVs"/>
                         <outlet property="translationTextView" destination="ZvE-I3-9IL" id="PeQ-09-nZI"/>
                     </connections>
                 </viewController>

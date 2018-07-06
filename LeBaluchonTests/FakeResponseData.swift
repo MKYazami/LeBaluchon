@@ -17,6 +17,13 @@ class FakeResponseData {
         return data
     }
     
+    static var translationCorrectData: Data {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "TranslationData", withExtension: "json")
+        let data = try! Data(contentsOf: url!)
+        return data
+    }
+    
     static let currencyIncorrectData = "incorrectData".data(using: .utf8)
     
     // MARK: Fake Responses
@@ -26,4 +33,5 @@ class FakeResponseData {
     // MARK: Fake Error
     class CurrencyError: Error {}
     static let error = CurrencyError()
+    
 }

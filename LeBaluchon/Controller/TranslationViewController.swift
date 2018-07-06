@@ -19,28 +19,28 @@ class TranslationViewController: UIViewController {
     
     // MARK: Action
     @IBAction func translate() {
-        toogleActivityIndicator(shown: true)
+        Helper.toogleActivityController(activityIndicator: activityIndicator, button: translateBtn, showActivityIndicator: true)
         getTranslatedText()
     }
     
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        toogleActivityIndicator(shown: false)
+        Helper.toogleActivityController(activityIndicator: activityIndicator, button: translateBtn, showActivityIndicator: false)
     }
     
     private func getTranslatedText() {
         guard let textTotranslate = translationTextView.text, !textTotranslate.isEmpty else {
             alertMessage(title: "Champs Vide !", message: "Merci d'entrer du text à traduire")
-            self.toogleActivityIndicator(shown: false)
+            Helper.toogleActivityController(activityIndicator: activityIndicator, button: translateBtn, showActivityIndicator: false)
             return
         }
         TranslationService.sharedInstance.getTranslation(textTotranslate: textTotranslate, languageTranslationPair: getLanguagePair()) { (success, translatedText) in
-            self.toogleActivityIndicator(shown: false)
+            Helper.toogleActivityController(activityIndicator: self.activityIndicator, button: self.translateBtn, showActivityIndicator: false)
             if success, let translatedText = translatedText?.translatedText {
                 self.updateDisplay(textTranslated: translatedText)
             } else {
-                self.alertMessage(title: "Erreur Réseau", message: "Merci de vérifier votre connexion internet ou réessayer ultérieurement !")
+                self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertMessage)
             }
             
         }
@@ -54,11 +54,6 @@ class TranslationViewController: UIViewController {
         let languagePairIndex = languageTranslationPairPickerView.selectedRow(inComponent: 0)
         
         return languageTranslationPair[languagePairIndex]
-    }
-    
-    private func toogleActivityIndicator(shown: Bool) {
-        activityIndicator.isHidden = !shown
-        translateBtn.isHidden = shown
     }
     
     private func alertMessage(title: String, message: String) {

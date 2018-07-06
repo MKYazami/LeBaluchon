@@ -19,24 +19,24 @@ class CurrencyViewController: UIViewController {
     
     // MARK: Action
     @IBAction func convert() {
-        toogleActivityIndicator(shown: true)
+        Helper.toogleActivityController(activityIndicator: activityIndicator, button: convertBtn, showActivityIndicator: true)
         getCalculatedCurrency()
     }
     
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.toogleActivityIndicator(shown: false)
+        Helper.toogleActivityController(activityIndicator: activityIndicator, button: convertBtn, showActivityIndicator: false)
     }
     
     /// Get data from the Model
     private func getCalculatedCurrency() {
         CurrencyService.sharedInstance.getCurrency { (success, currency) in
-            self.toogleActivityIndicator(shown: false)
+            Helper.toogleActivityController(activityIndicator: self.activityIndicator, button: self.convertBtn, showActivityIndicator: false)
             if success, let currency = currency {
                 self.updateDisplay(currency: currency)
             } else {
-                self.alertMessage(title: "Probléme réseau", message: "Veuilliez vérifier votre connexion ou réessayer ultérieurement.")
+                self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertMessage)
             }
         }
     }
@@ -46,7 +46,7 @@ class CurrencyViewController: UIViewController {
     /// - Parameter currency: Currency get from the Model to update into the view
     private func updateDisplay(currency: Currency) {
         guard let inputCurrency = currencyTextField.text, !inputCurrency.isEmpty else {
-            alertMessage(title: "Données manquante", message: "Merci de bien vouloir entrer une donnée !")
+            alertMessage(title: "Données manquantes", message: "Merci de bien vouloir entrer une donnée !")
             resetDisplay()
             return
         }
@@ -73,11 +73,6 @@ class CurrencyViewController: UIViewController {
     private func resetDisplay() {
         currencyTextField.text = ""
         currencyResultLabel.text = ""
-    }
-    
-    private func toogleActivityIndicator(shown: Bool) {
-        activityIndicator.isHidden = !shown
-        convertBtn.isHidden = shown
     }
     
     /// Display pop up to warn the user

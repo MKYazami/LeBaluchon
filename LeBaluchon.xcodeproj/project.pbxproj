@@ -19,6 +19,7 @@
 		910AD82820E3786E00C216D7 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AD82720E3786E00C216D7 /* WeatherViewController.swift */; };
 		9184A26C20EE55990084FED2 /* DataTranslations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26B20EE55990084FED2 /* DataTranslations.swift */; };
 		9184A26E20EE57200084FED2 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26D20EE57200084FED2 /* TranslationService.swift */; };
+		9184A27020EF2AA20084FED2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26F20EF2AA20084FED2 /* Helper.swift */; };
 		9198DD1120E7D1F800FCB5FA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1020E7D1F800FCB5FA /* Currency.swift */; };
 		9198DD1520E7D30D00FCB5FA /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */; };
 		9198DD2520EA22EB00FCB5FA /* CurrencyServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2420EA22EB00FCB5FA /* CurrencyServiceTestCase.swift */; };
@@ -53,6 +54,7 @@
 		910AD82720E3786E00C216D7 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		9184A26B20EE55990084FED2 /* DataTranslations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTranslations.swift; sourceTree = "<group>"; };
 		9184A26D20EE57200084FED2 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
+		9184A26F20EF2AA20084FED2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9198DD1020E7D1F800FCB5FA /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		9198DD1A20EA220C00FCB5FA /* LeBaluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 				910AD81720E36F9800C216D7 /* View */,
 				910AD81820E36F9F00C216D7 /* Controller */,
 				910AD81920E36FA600C216D7 /* SupportingFiles */,
+				9184A26F20EF2AA20084FED2 /* Helper.swift */,
 			);
 			path = LeBaluchon;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				910AD82820E3786E00C216D7 /* WeatherViewController.swift in Sources */,
 				9184A26C20EE55990084FED2 /* DataTranslations.swift in Sources */,
 				9184A26E20EE57200084FED2 /* TranslationService.swift in Sources */,
+				9184A27020EF2AA20084FED2 /* Helper.swift in Sources */,
 				9198DD1520E7D30D00FCB5FA /* CurrencyService.swift in Sources */,
 				910AD82420E3784000C216D7 /* CurrencyViewController.swift in Sources */,
 				910AD80420E36EE300C216D7 /* AppDelegate.swift in Sources */,

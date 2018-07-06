@@ -20,6 +20,8 @@
 		9184A26C20EE55990084FED2 /* DataTranslations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26B20EE55990084FED2 /* DataTranslations.swift */; };
 		9184A26E20EE57200084FED2 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26D20EE57200084FED2 /* TranslationService.swift */; };
 		9184A27020EF2AA20084FED2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26F20EF2AA20084FED2 /* Helper.swift */; };
+		9184A27320EFA0CD0084FED2 /* TranslationServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A27220EFA0CD0084FED2 /* TranslationServiceTestCase.swift */; };
+		9184A27720EFA1AA0084FED2 /* DataTranslation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9184A27620EFA1AA0084FED2 /* DataTranslation.json */; };
 		9198DD1120E7D1F800FCB5FA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1020E7D1F800FCB5FA /* Currency.swift */; };
 		9198DD1520E7D30D00FCB5FA /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */; };
 		9198DD2520EA22EB00FCB5FA /* CurrencyServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2420EA22EB00FCB5FA /* CurrencyServiceTestCase.swift */; };
@@ -55,6 +57,8 @@
 		9184A26B20EE55990084FED2 /* DataTranslations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTranslations.swift; sourceTree = "<group>"; };
 		9184A26D20EE57200084FED2 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		9184A26F20EF2AA20084FED2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9184A27220EFA0CD0084FED2 /* TranslationServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationServiceTestCase.swift; sourceTree = "<group>"; };
+		9184A27620EFA1AA0084FED2 /* DataTranslation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DataTranslation.json; sourceTree = "<group>"; };
 		9198DD1020E7D1F800FCB5FA /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		9198DD1420E7D30D00FCB5FA /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		9198DD1A20EA220C00FCB5FA /* LeBaluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +176,15 @@
 			path = Translation;
 			sourceTree = "<group>";
 		};
+		9184A27120EFA08A0084FED2 /* TranslationTests */ = {
+			isa = PBXGroup;
+			children = (
+				9184A27220EFA0CD0084FED2 /* TranslationServiceTestCase.swift */,
+				9184A27620EFA1AA0084FED2 /* DataTranslation.json */,
+			);
+			path = TranslationTests;
+			sourceTree = "<group>";
+		};
 		9198DCE920E6847000FCB5FA /* Currency */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +200,7 @@
 				9198DD2820EA23D100FCB5FA /* FakeResponseData.swift */,
 				9198DD2B20EA3B8600FCB5FA /* URLSessionFake.swift */,
 				9198DD2A20EA2A6300FCB5FA /* CurrencyTests */,
+				9184A27120EFA08A0084FED2 /* TranslationTests */,
 				9198DD1E20EA220C00FCB5FA /* Info.plist */,
 			);
 			path = LeBaluchonTests;
@@ -299,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9198DD2720EA234A00FCB5FA /* Currency.json in Resources */,
+				9184A27720EFA1AA0084FED2 /* DataTranslation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +359,7 @@
 			files = (
 				9198DD2E20EA919900FCB5FA /* CurrencyTestCase.swift in Sources */,
 				9198DD2520EA22EB00FCB5FA /* CurrencyServiceTestCase.swift in Sources */,
+				9184A27320EFA0CD0084FED2 /* TranslationServiceTestCase.swift in Sources */,
 				9198DD2C20EA3B8600FCB5FA /* URLSessionFake.swift in Sources */,
 				9198DD2920EA23D100FCB5FA /* FakeResponseData.swift in Sources */,
 			);

@@ -19,12 +19,12 @@ class FakeResponseData {
     
     static var translationCorrectData: Data {
         let bundle = Bundle(for: FakeResponseData.self)
-        let url = bundle.url(forResource: "TranslationData", withExtension: "json")
+        let url = bundle.url(forResource: "DataTranslation", withExtension: "json")
         let data = try! Data(contentsOf: url!)
         return data
     }
     
-    static let currencyIncorrectData = "incorrectData".data(using: .utf8)
+    static let incorrectData = "incorrectData".data(using: .utf8)
     
     // MARK: Fake Responses
     static let reponseOK = HTTPURLResponse(url: URL(string: "https://www.google.fr")!, statusCode: 200, httpVersion: nil, headerFields: nil)!

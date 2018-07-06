@@ -1,9 +1,11 @@
 {
     "data": {
-            "translations": [
-                {
-                    "translatedText": "a translation"
-                }
-            ]
+        "translations": [
+                         {
+                         "translatedText": "a translation"
+                         }
+                         ]
     }
 }
+
+// Original translation is "une traduction"

@@ -49,7 +49,7 @@ class TranslationService {
                         callBack(false, nil)
                         return
                 }
-                
+
                 let translation = TranslatedText(translatedText: translatedText.translatedText)
                 callBack(true, translation)
             }

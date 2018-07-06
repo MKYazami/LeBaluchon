@@ -14,6 +14,13 @@ class TranslationService {
     
     private var translationSession = URLSession(configuration: .default)
     
+    /// This initializer is used only for testing
+    ///
+    /// - Parameter currencySession: Inject the URLSessionFake
+    init(translationSession: URLSession) {
+        self.translationSession = translationSession
+    }
+    
     func getTranslation(textTotranslate: String, languageTranslationPair: String, callBack: @escaping (Bool, TranslatedText?) -> Void) {
         // Set url
         guard let url = getTranslationURL(textToTranslate: textTotranslate, languageTranslationPair: languageTranslationPair) else {

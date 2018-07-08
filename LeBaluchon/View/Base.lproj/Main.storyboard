@@ -330,6 +330,12 @@
                         <viewLayoutGuide key="safeArea" id="TnG-LI-Rkh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Météo" largeTitleDisplayMode="always" id="HXN-gK-BKv"/>
+                    <connections>
+                        <outlet property="newyorkTemperatureLabel" destination="DOg-bV-Xgi" id="eZj-Rl-ntW"/>
+                        <outlet property="newyorkWeatherConditionsIcon" destination="Uhk-it-oJs" id="9O3-hi-G7n"/>
+                        <outlet property="parisTemperatureLabel" destination="I7i-ov-L32" id="eKJ-F1-2wD"/>
+                        <outlet property="parisWeatherConditionsIcon" destination="H3G-bG-EpK" id="Nzu-4f-dxc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOA-L6-XnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

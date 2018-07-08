@@ -48,7 +48,6 @@ class WeatherService {
                     return
                 }
                 
-                
                 guard let jsonDecoder = try? JSONDecoder().decode(DataWeather.self, from: data),
                     let codeWeatherConditions = jsonDecoder.query.results.channel.item.condition.code,
                     let fahrenheitemperature = jsonDecoder.query.results.channel.item.condition.temp else {
@@ -78,7 +77,6 @@ class WeatherService {
         let urlString = baseURL + yql
         
         let url = URL(string: urlString)
-        
         
         return url
     }

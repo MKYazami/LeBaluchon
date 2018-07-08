@@ -30,5 +30,4 @@ class Weather {
         return String(format: "%.1f", celsiusTemperature)
     }
     
-    
 }

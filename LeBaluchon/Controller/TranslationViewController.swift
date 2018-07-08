@@ -56,6 +56,11 @@ class TranslationViewController: UIViewController {
         return languageTranslationPair[languagePairIndex]
     }
     
+    /// Display pop up to warn the user
+    ///
+    /// - Parameters:
+    ///   - title: Alert title
+    ///   - message: Message title
     private func alertMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)

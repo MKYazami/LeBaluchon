@@ -30,7 +30,6 @@ class WeatherViewController: UIViewController {
     
     private func getNewYorkWeather() {
         WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.newyork) { (success, conditions) in
-            
             if success, let conditions = conditions {
                 self.updateDisplay(temperature: conditions.temp, codeConditions: conditions.code, temperatureLabel: self.newyorkTemperatureLabel, iconConditions: self.newyorkWeatherConditionsIcon)
             } else {
@@ -41,7 +40,6 @@ class WeatherViewController: UIViewController {
     
     private func getParisWeather() {
         WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.paris) { (success, conditions) in
-            
             if success, let conditions = conditions {
                 self.updateDisplay(temperature: conditions.temp, codeConditions: conditions.code, temperatureLabel: self.parisTemperatureLabel, iconConditions: self.parisWeatherConditionsIcon)
             } else {
@@ -52,6 +50,7 @@ class WeatherViewController: UIViewController {
 
     private func updateDisplay(temperature: String?, codeConditions: String?, temperatureLabel: UILabel, iconConditions: UIImageView) {
         
+        // Upadate display temperature
         if let temperature = temperature {
             // Convert temperature to ° Celsius
             let celsiusTemperature = Weather.convertFromFahrenheitToCelsius(fahrenheitTemperature: temperature)
@@ -61,6 +60,7 @@ class WeatherViewController: UIViewController {
             temperatureLabel.text = "Temperature unavailable!"
         }
         
+        // Upadate display conditions icons
         if let codeConditions = codeConditions {
             // Here convert code to icon
         } else {
@@ -69,6 +69,11 @@ class WeatherViewController: UIViewController {
         
     }
     
+    /// Display pop up to warn the user
+    ///
+    /// - Parameters:
+    ///   - title: Alert title
+    ///   - message: Message title
     private func alertMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Okay", style: .cancel, handler: nil)

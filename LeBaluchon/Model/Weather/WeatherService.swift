@@ -56,9 +56,6 @@ class WeatherService {
                         return
                 }
                 
-                //Convert temperature to ° Celsius
-//                let celsiusTemperature = Weather.convertFromFahrenheitToCelsius(fahrenheitTemperature: fahrenheitemperature)
-                
                 let conditions = Condition(code: codeWeatherConditions, temp: fahrenheitemperature, text: nil)
                 callBack(true, conditions)
                 

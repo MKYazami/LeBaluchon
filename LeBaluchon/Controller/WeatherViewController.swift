@@ -24,6 +24,56 @@ class WeatherViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        getNewYorkWeather()
+        getParisWeather()
     }
     
+    private func getNewYorkWeather() {
+        WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.newyork) { (success, conditions) in
+            
+            if success, let conditions = conditions {
+                self.updateDisplay(temperature: conditions.temp, codeConditions: conditions.code, temperatureLabel: self.newyorkTemperatureLabel, iconConditions: self.newyorkWeatherConditionsIcon)
+            } else {
+                self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertTitle)
+            }
+        }
+    }
+    
+    private func getParisWeather() {
+        WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.paris) { (success, conditions) in
+            
+            if success, let conditions = conditions {
+                self.updateDisplay(temperature: conditions.temp, codeConditions: conditions.code, temperatureLabel: self.parisTemperatureLabel, iconConditions: self.parisWeatherConditionsIcon)
+            } else {
+                self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertMessage)
+            }
+        }
+    }
+
+    private func updateDisplay(temperature: String?, codeConditions: String?, temperatureLabel: UILabel, iconConditions: UIImageView) {
+        
+        if let temperature = temperature {
+            // Convert temperature to ° Celsius
+            let celsiusTemperature = Weather.convertFromFahrenheitToCelsius(fahrenheitTemperature: temperature)
+            
+            temperatureLabel.text = celsiusTemperature
+        } else {
+            temperatureLabel.text = "Temperature unavailable!"
+        }
+        
+        if let codeConditions = codeConditions {
+            // Here convert code to icon
+        } else {
+            iconConditions.image = #imageLiteral(resourceName: "EmptyImage")
+        }
+        
+    }
+    
+    private func alertMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        alert.addAction(action)
+        
+        present(alert, animated: true)
+    }
 }

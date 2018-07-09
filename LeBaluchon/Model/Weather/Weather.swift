@@ -27,7 +27,7 @@ class Weather {
         // Converting from base unit Kelvin to °C for final conversion
         let celsiusTemperature = UnitTemperature.celsius.converter.value(fromBaseUnitValue: kelvinTemperature)
         
-        return String(format: "%.1f", celsiusTemperature)
+        return String(format: "%.1f", celsiusTemperature) + "° C"
     }
     
 }

@@ -24,6 +24,13 @@ class FakeResponseData {
         return data
     }
     
+    static var weatherCorrectData: Data {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "DataWeather", withExtension: "json")
+        let data = try! Data(contentsOf: url!)
+        return data
+    }
+    
     static let incorrectData = "incorrectData".data(using: .utf8)
     
     // MARK: Fake Responses

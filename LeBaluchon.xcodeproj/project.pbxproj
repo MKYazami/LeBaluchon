@@ -32,6 +32,7 @@
 		9198DD2920EA23D100FCB5FA /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2820EA23D100FCB5FA /* FakeResponseData.swift */; };
 		9198DD2C20EA3B8600FCB5FA /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2B20EA3B8600FCB5FA /* URLSessionFake.swift */; };
 		9198DD2E20EA919900FCB5FA /* CurrencyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198DD2D20EA919900FCB5FA /* CurrencyTestCase.swift */; };
+		91C86A2520F3B44800D86839 /* DataWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = 91C86A2420F3B44800D86839 /* DataWeather.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		9198DD2820EA23D100FCB5FA /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 		9198DD2B20EA3B8600FCB5FA /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
 		9198DD2D20EA919900FCB5FA /* CurrencyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTestCase.swift; sourceTree = "<group>"; };
+		91C86A2420F3B44800D86839 /* DataWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DataWeather.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				9198DD2B20EA3B8600FCB5FA /* URLSessionFake.swift */,
 				9198DD2A20EA2A6300FCB5FA /* CurrencyTests */,
 				9184A27120EFA08A0084FED2 /* TranslationTests */,
+				91C86A2320F3B22200D86839 /* WeatherTests */,
 				9198DD1E20EA220C00FCB5FA /* Info.plist */,
 			);
 			path = LeBaluchonTests;
@@ -231,6 +234,14 @@
 				9198DD2620EA234A00FCB5FA /* Currency.json */,
 			);
 			path = CurrencyTests;
+			sourceTree = "<group>";
+		};
+		91C86A2320F3B22200D86839 /* WeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				91C86A2420F3B44800D86839 /* DataWeather.json */,
+			);
+			path = WeatherTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9198DD2720EA234A00FCB5FA /* Currency.json in Resources */,
+				91C86A2520F3B44800D86839 /* DataWeather.json in Resources */,
 				9184A27720EFA1AA0084FED2 /* DataTranslation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

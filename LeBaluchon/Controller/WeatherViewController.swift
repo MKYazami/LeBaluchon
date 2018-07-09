@@ -17,6 +17,8 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var newyorkWeatherConditionsIcon: UIImageView!
     @IBOutlet weak var parisWeatherConditionsIcon: UIImageView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,7 @@ class WeatherViewController: UIViewController {
     
     private func getParisWeather() {
         WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.paris) { (success, conditions) in
+            self.activityIndicator.isHidden = true
             if success, let conditions = conditions {
                 self.updateDisplay(temperature: conditions.temp, codeConditions: conditions.code, temperatureLabel: self.parisTemperatureLabel, iconConditions: self.parisWeatherConditionsIcon)
             } else {

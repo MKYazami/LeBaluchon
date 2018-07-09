@@ -331,6 +331,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Météo" largeTitleDisplayMode="always" id="HXN-gK-BKv"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="x64-Th-uPK" id="Mrv-k8-JSs"/>
                         <outlet property="newyorkTemperatureLabel" destination="DOg-bV-Xgi" id="eZj-Rl-ntW"/>
                         <outlet property="newyorkWeatherConditionsIcon" destination="Uhk-it-oJs" id="9O3-hi-G7n"/>
                         <outlet property="parisTemperatureLabel" destination="I7i-ov-L32" id="eKJ-F1-2wD"/>

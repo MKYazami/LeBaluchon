@@ -65,7 +65,7 @@ class WeatherViewController: UIViewController {
         
         // Upadate display conditions icons
         if let codeConditions = codeConditions {
-            iconConditions.image = getIconWeatherFromCodeWeatherConditions(codeWeatherConditions: codeConditions)
+            iconConditions.image = UIImage(imageLiteralResourceName: Weather.getIconWeatherNameFromCodeWeatherConditions(codeWeatherConditions: codeConditions))
         } else {
             iconConditions.image = #imageLiteral(resourceName: "EmptyImage")
         }
@@ -83,78 +83,5 @@ class WeatherViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true)
-    }
-}
-
-// MARK: Weather conditions icons handler
-extension WeatherViewController {
-    func getIconWeatherFromCodeWeatherConditions(codeWeatherConditions: String?) -> UIImage? {
-        guard let codeWeatherConditions = codeWeatherConditions, let codeWeatherCondition = Int(codeWeatherConditions) else { return nil }
-        switch codeWeatherCondition {
-        case 0:
-            // Tornado
-            return #imageLiteral(resourceName: "Tornado")
-        case 1...2:
-            // Hurricane
-            return #imageLiteral(resourceName: "Hurricane")
-        case 3...4, 37...39, 45, 47 :
-            // CloudRainThunder
-            return #imageLiteral(resourceName: "CloudRainThunder")
-        case 5...7, 10:
-            // ModSleet
-            return #imageLiteral(resourceName: "ModSleet")
-        case 8...9:
-            // Drizzle
-            return #imageLiteral(resourceName: "Drizzle")
-        case 11...12, 40:
-            // HeavyRain
-            return #imageLiteral(resourceName: "HeavyRain")
-        case 13...16, 41...43, 46:
-            // DecLightSnow
-            return #imageLiteral(resourceName: "OccLightSnow")
-        case 17...18:
-            // Sleet
-            return #imageLiteral(resourceName: "Sleet")
-        case 19...22:
-            // Mist
-            return #imageLiteral(resourceName: "Mist")
-        case 23...24:
-            // Wind
-            return #imageLiteral(resourceName: "wind")
-        case 25:
-            // Cold
-            return #imageLiteral(resourceName: "Cold")
-        case 26:
-            // Cloudy
-            return #imageLiteral(resourceName: "Cloudy")
-        case 27:
-            // CloudyNight
-            return #imageLiteral(resourceName: "CloudyNight")
-        case 28:
-            // CloudyDay
-            return #imageLiteral(resourceName: "CloudyDay")
-        case 29, 33:
-            // PartlyCloudyNight
-            return #imageLiteral(resourceName: "PartlyCloudyNight")
-        case 30, 34, 44:
-            // PartlyCloudyDay
-            return #imageLiteral(resourceName: "PartlyCloudyDay")
-        case 31:
-            // Clear
-            return #imageLiteral(resourceName: "Clear")
-        case 32:
-            // Sunny
-            return #imageLiteral(resourceName: "Sunny")
-        case 35:
-            // RainHail
-            return #imageLiteral(resourceName: "RainHail")
-        case 36:
-            // Hot
-            return #imageLiteral(resourceName: "Hot")
-        case 3200:
-            return nil
-        default:
-            return nil
-        }
     }
 }

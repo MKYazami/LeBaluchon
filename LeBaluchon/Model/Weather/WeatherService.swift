@@ -22,6 +22,11 @@ class WeatherService {
         self.weatherSession = weatherSession
     }
     
+    /// Get weather information from Yahoo weather API
+    ///
+    /// - Parameters:
+    ///   - codeLocation: Code allows to determine which city is concerned
+    ///   - callBack: Bool to determine if all checks are successfully & Conditions contains the differents weather informations
     func getWeather(codeLocation: String, callBack: @escaping (Bool, Condition?) -> Void) {
         
         guard let url = getWeatherURL(codeLocation: codeLocation) else {
@@ -65,6 +70,10 @@ class WeatherService {
         task?.resume()
     }
     
+    /// Get url allows to get weather informations from API
+    ///
+    /// - Parameter codeLocation: Code location determined from API doctumentation & are stored in CodeLocation struct in this Project
+    /// - Returns: Return URL with parameters ready for request
     private func getWeatherURL(codeLocation: String) -> URL? {
         let baseURL = "https://query.yahooapis.com/v1/public/yql?q="
         guard let yql = "select item.condition from weather.forecast where woeid = \(codeLocation)&format=json".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {

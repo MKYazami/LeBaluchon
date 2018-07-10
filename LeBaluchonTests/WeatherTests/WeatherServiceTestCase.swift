@@ -79,28 +79,28 @@ class WeatherServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
-    func testGetWeatherShouldPostSuccessCallBackIfNoErrorAndCorrectData() {
-        // Given
-        let weatherService = WeatherService.init(weatherSession: URLSessionFake(
-            data: FakeResponseData.weatherCorrectData, response: FakeResponseData.reponseOK, error: nil))
-        
-        let expectation = XCTestExpectation(description: "Wait for queue change")
-        //When
-        weatherService.getWeather(codeLocation: CodeLocation.paris) { (success, conditions) in
-            // Then
-            let temperature = "81"
-            let codeConditions = "26"
-            
-            XCTAssertTrue(success)
-            XCTAssertNotNil(conditions)
-            
-            XCTAssertEqual(conditions?.temp, temperature)
-            XCTAssertEqual(conditions?.code, codeConditions)
-            
-            expectation.fulfill()
-        }
-        
-        wait(for: [expectation], timeout: 0.01)
-    }
+//    func testGetWeatherShouldPostSuccessCallBackIfNoErrorAndCorrectData() {
+//        // Given
+//        let weatherService = WeatherService.init(weatherSession: URLSessionFake(
+//            data: FakeResponseData.weatherCorrectData, response: FakeResponseData.reponseOK, error: nil))
+//        
+//        let expectation = XCTestExpectation(description: "Wait for queue change")
+//        //When
+//        weatherService.getWeather(codeLocation: CodeLocation.paris) { (success, conditions) in
+//            // Then
+//            let temperature = "81"
+//            let codeConditions = "26"
+//            
+//            XCTAssertTrue(success)
+//            XCTAssertNotNil(conditions)
+//            
+//            XCTAssertEqual(conditions?.temp, temperature)
+//            XCTAssertEqual(conditions?.code, codeConditions)
+//            
+//            expectation.fulfill()
+//        }
+//        
+//        wait(for: [expectation], timeout: 0.01)
+//    }
     
 }

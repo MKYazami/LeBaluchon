@@ -35,25 +35,25 @@ class CurrencyService {
         
         var task: URLSessionDataTask?
         
-        //Cancel the task before to start new one
+        // Cancel the task before to start new one
         task?.cancel()
         
         task = currencySession.dataTask(with: url) { (data, response, error)  in
-            //Bring to main thread
+            // Bring to main thread
             DispatchQueue.main.async {
-                //Check data and no error
+                // Check data and no error
                 guard let data = data, error == nil else {
                     callBack(false, nil)
                     return
                 }
                 
-                //Check Status response code
+                // Check Status response code
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     callBack(false, nil)
                     return
                 }
                 
-                //Decode the JSON data
+                // Decode the JSON data
                 guard let reponseJSON = try? JSONDecoder().decode(Currency.self, from: data),
                     let base = reponseJSON.baseCurrency,
                     let rate = reponseJSON.rates else {
@@ -61,14 +61,14 @@ class CurrencyService {
                         return
                 }
                 
-                //If all checks are okay, we set call back to true with the data
+                // If all checks are okay, we set call back to true with the data
                 let currency = Currency(baseCurrency: base, rates: rate)
                 callBack(true, currency)
                 
             }
         }
         
-        //Resume the task
+        // Resume the task
         task?.resume()
     }
 }

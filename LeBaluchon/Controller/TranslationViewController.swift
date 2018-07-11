@@ -29,6 +29,7 @@ class TranslationViewController: UIViewController {
         Helper.toogleActivityController(activityIndicator: activityIndicator, button: translateBtn, showActivityIndicator: false)
     }
     
+    /// Get API data from Model
     private func getTranslatedText() {
         guard let textTotranslate = translationTextView.text, !textTotranslate.isEmpty else {
             alertMessage(title: "Champs Vide !", message: "Merci d'entrer du text à traduire")
@@ -46,10 +47,16 @@ class TranslationViewController: UIViewController {
         }
     }
     
+    /// Update display
+    ///
+    /// - Parameter textTranslated: Text translated get from the Model to update into the view
     private func updateDisplay(textTranslated: String) {
         translatedTextView.text = textTranslated
     }
     
+    /// Get the language which must determine the translation source and target
+    ///
+    /// - Returns: Language pair translation
     private func getLanguagePair() -> String {
         let languagePairIndex = languageTranslationPairPickerView.selectedRow(inComponent: 0)
         
@@ -91,11 +98,12 @@ extension TranslationViewController: UIPickerViewDataSource, UIPickerViewDelegat
 
 // MARK: Keyboard behaviours
 extension TranslationViewController: UITextFieldDelegate {
-    //Dismiss the keyboard when touching somewhere in the sreen
+    // Dismiss the keyboard when touching somewhere in the sreen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
+    // Set the keyboard return key in case changing the keyboard type
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         return true

@@ -13,6 +13,12 @@ class URLSessionFake: URLSession {
     var response: URLResponse?
     var error: Error?
     
+    /// This initialiser allows to initialise each parameter manually to test all conditions possible for tests
+    ///
+    /// - Parameters:
+    ///   - data: Data to test
+    ///   - response: URL response to test
+    ///   - error: Error 
     init(data: Data?, response: URLResponse?, error: Error?) {
         self.data = data
         self.response = response
@@ -47,6 +53,6 @@ class URLSessionDataTaskFake: URLSessionDataTask {
         completionHandler?(data, urlResponse, responseError)
     }
     
-    // This method does not contain anything because there is no network request to cancel it
+    // This method does not contain anything, because there is no network request to cancel it in tests conditions
     override func cancel() {}
 }

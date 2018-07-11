@@ -13,7 +13,7 @@ class WeatherService {
     static let sharedInstance = WeatherService()
     private init() {}
     
-    // Set URLSession
+    // weatherSession is in global scope to allows the dependency injection for tests
     private var weatherSession = URLSession(configuration: .default)
     
     /// This initializer is used only for testing
@@ -29,9 +29,10 @@ class WeatherService {
     ///
     /// - Parameters:
     ///   - codeLocation: Code allows to determine which city is concerned
-    ///   - callBack: Bool to determine if all checks are successfully & data weather contains the differents weather informations
+    ///   - callBack: if any problem in the request callBack = (false, nil) if evrything Ok callBack = (true, currency)
     func getWeather(codeLocation: String, callBack: @escaping (Bool, DataWeather?) -> Void) {
         
+        // Set url for Session
         guard let url = getWeatherURL(codeLocation: codeLocation) else {
             //            print("URL not available")
             callBack(false, nil)
@@ -40,6 +41,7 @@ class WeatherService {
         
         var task: URLSessionDataTask?
         
+        // Cancel the task before to start new one
         task?.cancel()
         
         task = weatherSession.dataTask(with: url, completionHandler: { (data, response, error) in
@@ -71,6 +73,7 @@ class WeatherService {
             }
         })
         
+        // Resume the task
         task?.resume()
     }
     

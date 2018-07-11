@@ -29,7 +29,7 @@ class CurrencyViewController: UIViewController {
         Helper.toogleActivityController(activityIndicator: activityIndicator, button: convertBtn, showActivityIndicator: false)
     }
     
-    /// Get data from the Model
+    /// Get API data from Model
     private func getCalculatedCurrency() {
         CurrencyService.sharedInstance.getCurrency { (success, currency) in
             Helper.toogleActivityController(activityIndicator: self.activityIndicator, button: self.convertBtn, showActivityIndicator: false)
@@ -41,7 +41,7 @@ class CurrencyViewController: UIViewController {
         }
     }
     
-    /// Update diplay of some labels
+    /// Update display
     ///
     /// - Parameter currency: Currency get from the Model to update into the view
     private func updateDisplay(currency: Currency) {
@@ -63,7 +63,8 @@ class CurrencyViewController: UIViewController {
         }
         
         let currencyResult = Currency.calculateCurrency(baseCurrency: baseCurrencyRate, rateTarget: rateTarget)
-
+        
+        // Display the currency result with 3 numbers dicimal precision
         currencyResultLabel.text = String(format: "%.3f", currencyResult)
         baseCurrencyLabel.text = currency.baseCurrency
         targetCurrencyLabel.text = "USD"
@@ -92,12 +93,12 @@ class CurrencyViewController: UIViewController {
 // MARK: Keyboard Behaviours
 extension CurrencyViewController: UITextFieldDelegate {
     
-    //Dismiss the keyboard when touching somewhere in the sreen
+    // Dismiss the keyboard when touching somewhere in the sreen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
-    //Set the keyboard return key in case changing the keyboard type
+    // Set the keyboard return key in case changing the keyboard type
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         getCalculatedCurrency()

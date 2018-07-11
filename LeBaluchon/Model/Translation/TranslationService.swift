@@ -9,9 +9,11 @@
 import Foundation
 
 class TranslationService {
+    // MARK: Singleton
     static let sharedInstance = TranslationService()
     private init() {}
     
+    // translationSession is in global scope to allows the dependency injection for tests
     private var translationSession = URLSession(configuration: .default)
     
     /// This initializer is used only for testing
@@ -21,8 +23,15 @@ class TranslationService {
         self.translationSession = translationSession
     }
     
+    // MARK: Method
+    
+    ///
+    /// - Parameters:
+    ///   - textTotranslate: Text to translate
+    ///   - languageTranslationPair: Language pair as French -> English, Dutch -> Spanish…
+    ///   - callBack: if any problem in the request callBack = (false, nil) if evrything Ok callBack = (true, currency)
     func getTranslation(textTotranslate: String, languageTranslationPair: String, callBack: @escaping (Bool, TranslatedText?) -> Void) {
-        // Set url
+        // Set url for Session
         guard let url = getTranslationURL(textToTranslate: textTotranslate, languageTranslationPair: languageTranslationPair) else {
             callBack(false, nil)
             return
@@ -30,44 +39,60 @@ class TranslationService {
         
         var task: URLSessionDataTask?
         
+        // Cancel the task before to start new one
         task?.cancel()
         
         task = translationSession.dataTask(with: url) { (data, response, error) in
+            // Bring to main thread
             DispatchQueue.main.async {
+                // Check data and no error
                 guard let data = data, error == nil else {
                     callBack(false, nil)
                     return
                 }
                 
+                // Check Status response code
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     callBack(false, nil)
                     return
                 }
                 
+                // Decode the JSON data
                 guard let jsonDecoder = try? JSONDecoder().decode(DataTranslations.self, from: data),
                     let translatedText = jsonDecoder.data.translations?[0] else {
                         callBack(false, nil)
                         return
                 }
-
+                
+                // If all checks are okay, we set call back to true with the data
                 let translation = TranslatedText(translatedText: translatedText.translatedText)
                 callBack(true, translation)
             }
             
         }
         
+        // Resume the task
         task?.resume()
     }
     
+    /// Get translation url for URLSession
+    ///
+    /// - Parameters:
+    ///   - textToTranslate: Text to translate
+    ///   - languageTranslationPair: Language pair as French -> English, Dutch -> Spanish…
+    /// - Returns: URL for http call
     private func getTranslationURL(textToTranslate: String, languageTranslationPair: String) -> URL? {
         // Sample of static URL for understanding purpose
         // https://www.googleapis.com/language/translate/v2?key=AIzaSyCQjn22TDWEKEcyoTHhfb2sGFT3H7Z-cNA&source=fr&target=en&format=text&q=Text_To_Translate
         
-        //URL components
+        // URL components
+        
+        //  Format text to translate into allowed characters in URL (ex: space, special characters)
         guard let textTotranslateInURL = textToTranslate.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
             return nil
         }
         
+        // Set source & target according to language pairs
         let souceAndTarget = setSourceAndTargetLanguages(languageTranslationPair: languageTranslationPair)
         guard let source = souceAndTarget.source, let target = souceAndTarget.target else {
             return nil

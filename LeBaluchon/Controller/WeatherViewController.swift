@@ -33,7 +33,7 @@ class WeatherViewController: UIViewController {
     private func getNewYorkWeather() {
         WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.newyork) { (success, dataWeather) in
             if success, let dataWeather = dataWeather {
-                self.updateDisplay(temperature: dataWeather.query.results.channel.item.condition.temp, codeConditions: dataWeather.query.results.channel.item.condition.code, temperatureLabel: self.newyorkTemperatureLabel, iconConditions: self.newyorkWeatherConditionsIcon)
+                self.updateDisplay(temperature: dataWeather.query.results.channel.item.condition.temp, codeConditions: dataWeather.query.results.channel.item.condition.code, temperatureLabel: self.newyorkTemperatureLabel, imageViewIconConditions: self.newyorkWeatherConditionsIcon)
             } else {
                 self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertTitle)
             }
@@ -44,14 +44,21 @@ class WeatherViewController: UIViewController {
         WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.paris) { (success, dataWeather) in
             self.activityIndicator.isHidden = true
             if success, let dataWeather = dataWeather {
-                self.updateDisplay(temperature: dataWeather.query.results.channel.item.condition.temp, codeConditions: dataWeather.query.results.channel.item.condition.code, temperatureLabel: self.parisTemperatureLabel, iconConditions: self.parisWeatherConditionsIcon)
+                self.updateDisplay(temperature: dataWeather.query.results.channel.item.condition.temp, codeConditions: dataWeather.query.results.channel.item.condition.code, temperatureLabel: self.parisTemperatureLabel, imageViewIconConditions: self.parisWeatherConditionsIcon)
             } else {
                 self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertMessage)
             }
         }
     }
 
-    private func updateDisplay(temperature: String?, codeConditions: String?, temperatureLabel: UILabel, iconConditions: UIImageView) {
+    /// Update display
+    ///
+    /// - Parameters:
+    ///   - temperature: Temparature
+    ///   - codeConditions: Code weather conditions
+    ///   - temperatureLabel: Label where to display the temperature
+    ///   - iconConditions: The UIImageView to display the icon weather conditions
+    private func updateDisplay(temperature: String?, codeConditions: String?, temperatureLabel: UILabel, imageViewIconConditions: UIImageView) {
         
         // Upadate display temperature
         if let temperature = temperature {
@@ -63,11 +70,11 @@ class WeatherViewController: UIViewController {
             temperatureLabel.text = "Temperature unavailable!"
         }
         
-        // Upadate display conditions icons
+        // Update display conditions icons
         if let codeConditions = codeConditions {
-            iconConditions.image = UIImage(imageLiteralResourceName: Weather.getIconWeatherNameFromCodeWeatherConditions(codeWeatherConditions: codeConditions))
+            imageViewIconConditions.image = UIImage(imageLiteralResourceName: Weather.getIconWeatherNameFromCodeWeatherConditions(codeWeatherConditions: codeConditions))
         } else {
-            iconConditions.image = #imageLiteral(resourceName: "EmptyImage")
+            imageViewIconConditions.image = #imageLiteral(resourceName: "EmptyImage")
         }
         
     }

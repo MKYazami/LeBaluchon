@@ -38,7 +38,7 @@ class FakeResponseData {
     static let reponseKO = HTTPURLResponse(url: URL(string: "https://www.google.fr")!, statusCode: 500, httpVersion: nil, headerFields: nil)!
     
     // MARK: Fake Error
-    class AnError: Error {}
-    static let error = AnError()
+    class FakeError: Error {}
+    static let error = FakeError()
     
 }

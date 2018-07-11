@@ -9,6 +9,7 @@
 import Foundation
 
 class WeatherService {
+    // MARK: Singleton
     static let sharedInstance = WeatherService()
     private init() {}
     
@@ -22,12 +23,14 @@ class WeatherService {
         self.weatherSession = weatherSession
     }
     
+    // MARK: Method
+    
     /// Get weather information from Yahoo weather API
     ///
     /// - Parameters:
     ///   - codeLocation: Code allows to determine which city is concerned
-    ///   - callBack: Bool to determine if all checks are successfully & Conditions contains the differents weather informations
-    func getWeather(codeLocation: String, callBack: @escaping (Bool, Condition?) -> Void) {
+    ///   - callBack: Bool to determine if all checks are successfully & data weather contains the differents weather informations
+    func getWeather(codeLocation: String, callBack: @escaping (Bool, DataWeather?) -> Void) {
         
         guard let url = getWeatherURL(codeLocation: codeLocation) else {
             //            print("URL not available")
@@ -40,29 +43,30 @@ class WeatherService {
         task?.cancel()
         
         task = weatherSession.dataTask(with: url, completionHandler: { (data, response, error) in
+            //Bring to main thread
             DispatchQueue.main.async {
+                //Check data and no error
                 guard let data = data, error == nil else {
                     //                    print("Data missing")
                     callBack(false, nil)
                     return
                 }
                 
+                //Check Status response code
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     //                    print("Incorrect response")
                     callBack(false, nil)
                     return
                 }
                 
-                guard let jsonDecoder = try? JSONDecoder().decode(DataWeather.self, from: data),
-                    let codeWeatherConditions = jsonDecoder.query.results.channel.item.condition.code,
-                    let fahrenheitemperature = jsonDecoder.query.results.channel.item.condition.temp else {
+                //Decode the JSON data
+                guard let dataWeather = try? JSONDecoder().decode(DataWeather.self, from: data) else {
                         //                    print("JSON Decoder Error")
                         callBack(false, nil)
                         return
                 }
                 
-                let conditions = Condition(code: codeWeatherConditions, temp: fahrenheitemperature, text: nil)
-                callBack(true, conditions)
+                callBack(true, dataWeather)
                 
             }
         })

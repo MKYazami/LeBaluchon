@@ -31,9 +31,9 @@ class WeatherViewController: UIViewController {
     }
     
     private func getNewYorkWeather() {
-        WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.newyork) { (success, conditions) in
-            if success, let conditions = conditions {
-                self.updateDisplay(temperature: conditions.temp, codeConditions: conditions.code, temperatureLabel: self.newyorkTemperatureLabel, iconConditions: self.newyorkWeatherConditionsIcon)
+        WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.newyork) { (success, dataWeather) in
+            if success, let dataWeather = dataWeather {
+                self.updateDisplay(temperature: dataWeather.query.results.channel.item.condition.temp, codeConditions: dataWeather.query.results.channel.item.condition.code, temperatureLabel: self.newyorkTemperatureLabel, iconConditions: self.newyorkWeatherConditionsIcon)
             } else {
                 self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertTitle)
             }
@@ -41,10 +41,10 @@ class WeatherViewController: UIViewController {
     }
     
     private func getParisWeather() {
-        WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.paris) { (success, conditions) in
+        WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.paris) { (success, dataWeather) in
             self.activityIndicator.isHidden = true
-            if success, let conditions = conditions {
-                self.updateDisplay(temperature: conditions.temp, codeConditions: conditions.code, temperatureLabel: self.parisTemperatureLabel, iconConditions: self.parisWeatherConditionsIcon)
+            if success, let dataWeather = dataWeather {
+                self.updateDisplay(temperature: dataWeather.query.results.channel.item.condition.temp, codeConditions: dataWeather.query.results.channel.item.condition.code, temperatureLabel: self.parisTemperatureLabel, iconConditions: self.parisWeatherConditionsIcon)
             } else {
                 self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertMessage)
             }

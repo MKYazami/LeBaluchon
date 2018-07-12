@@ -34,7 +34,6 @@ class WeatherService {
         
         // Set url for Session
         guard let url = getWeatherURL(codeLocation: codeLocation) else {
-            //            print("URL not available")
             callBack(false, nil)
             return
         }
@@ -49,21 +48,18 @@ class WeatherService {
             DispatchQueue.main.async {
                 //Check data and no error
                 guard let data = data, error == nil else {
-                    //                    print("Data missing")
                     callBack(false, nil)
                     return
                 }
                 
                 //Check Status response code
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    //                    print("Incorrect response")
                     callBack(false, nil)
                     return
                 }
                 
                 //Decode the JSON data
                 guard let dataWeather = try? JSONDecoder().decode(DataWeather.self, from: data) else {
-                        //                    print("JSON Decoder Error")
                         callBack(false, nil)
                         return
                 }

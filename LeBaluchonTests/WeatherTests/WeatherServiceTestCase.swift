@@ -79,48 +79,29 @@ class WeatherServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
-//    func testGetWeatherShouldPostSuccessCallBackIfNoErrorAndCorrectData() {
-//        // Given
-//        let weatherService = WeatherService(weatherSession: URLSessionFake(
-//            data: FakeResponseData.weatherCorrectData, response: FakeResponseData.reponseOK, error: nil))
-//
-//        let expectation = XCTestExpectation(description: "Wait for queue change")
-//        //When
-//        weatherService.getWeather(codeLocation: CodeLocation.paris) { (success, dataWeather) in
-//            // Then
-//            // These elements are copied from "Weather.json" to compare them
-//            let temperature = "81"
-//            let codeConditions = "26"
-//
-//            XCTAssertTrue(success)
-//            XCTAssertNotNil(dataWeather)
-//
-//            XCTAssertEqual(dataWeather?.query.results.channel.item.condition.temp, temperature)
-//            XCTAssertEqual(dataWeather?.query.results.channel.item.condition.code, codeConditions)
-//
-//            expectation.fulfill()
-//        }
-//
-//        wait(for: [expectation], timeout: 0.01)
-//    }
-    
-//    func testGetWeatherShouldPostSuccessCallBackIfNoErrorAndCorrectData() {
-//        let expectation = XCTestExpectation(description: "Wait")
-//        WeatherService.sharedInstance.getWeather(codeLocation: CodeLocation.paris) { (success, dataWeather) in
-//
-//            XCTAssertTrue(success)
-//            XCTAssertNotNil(dataWeather)
-//            
-//            let code = "28"
-//            let temp = "70"
-//            
-//            XCTAssertEqual(code, dataWeather?.query.results.channel.item.condition.code)
-//            XCTAssertEqual(temp, dataWeather?.query.results.channel.item.condition.temp)
-//            
-//            expectation.fulfill()
-//        }
-//        
-//        wait(for: [expectation], timeout: 10.0)
-//    }
+    func testGetWeatherShouldPostSuccessCallBackIfNoErrorAndCorrectData() {
+        // Given
+        let weatherService = WeatherService(weatherSession: URLSessionFake(
+            data: FakeResponseData.weatherCorrectData, response: FakeResponseData.reponseOK, error: nil))
+
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        //When
+        weatherService.getWeather(codeLocation: CodeLocation.paris) { (success, dataWeather) in
+            // Then
+            // These elements are copied from "Weather.json" to compare them
+            let temperature = "81"
+            let codeConditions = "26"
+
+            XCTAssertTrue(success)
+            XCTAssertNotNil(dataWeather)
+
+            XCTAssertEqual(dataWeather?.query.results.channel.item.condition.temp, temperature)
+            XCTAssertEqual(dataWeather?.query.results.channel.item.condition.code, codeConditions)
+
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 0.01)
+    }
     
 }

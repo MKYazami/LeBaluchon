@@ -39,4 +39,15 @@ struct Constants {
         static let textTotranslateParameter = "&q="
     }
     
+    struct YahooWeatherAPI {
+        // MARK: Base URL & URL parameters keys
+        static let baseURL = "https://query.yahooapis.com/v1/public/yql?q="
+        static let formatParameter = "&format="
+        
+        // MARK: URL parameters values
+        /// Add codeLocation after yql
+        static let yql = "select item.condition from weather.forecast where woeid ="
+        static let format = "json"
+    }
+    
 }

@@ -78,12 +78,17 @@ class WeatherService {
     /// - Parameter codeLocation: Code location determined from API doctumentation & are stored in CodeLocation struct in this Project
     /// - Returns: Return URL with parameters ready for request
     private func getWeatherURL(codeLocation: String) -> URL? {
-        let baseURL = "https://query.yahooapis.com/v1/public/yql?q="
-        guard let yql = "select item.condition from weather.forecast where woeid = \(codeLocation)&format=json".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+        typealias YWAPI = Constants.YahooWeatherAPI
+        
+        // Raw Yahoo Query Language + format parameter
+        let rawYQL = YWAPI.yql + codeLocation + YWAPI.formatParameter + YWAPI.format
+        
+        // Formatting the Yahoo Query Language to allowed characters in URL
+        guard let yql = rawYQL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
             return nil
         }
         
-        let urlString = baseURL + yql
+        let urlString = YWAPI.baseURL + yql
         
         let url = URL(string: urlString)
         

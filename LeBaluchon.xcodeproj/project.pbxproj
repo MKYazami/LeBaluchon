@@ -17,6 +17,7 @@
 		911B21D220F246F40056C9E3 /* DataWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B21D120F246F40056C9E3 /* DataWeather.swift */; };
 		911B21D420F248BE0056C9E3 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B21D320F248BE0056C9E3 /* WeatherService.swift */; };
 		911B21D620F249540056C9E3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B21D520F249540056C9E3 /* Weather.swift */; };
+		9144EC2120F8955900F5A03E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144EC2020F8955900F5A03E /* Constants.swift */; };
 		9184A26C20EE55990084FED2 /* DataTranslations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26B20EE55990084FED2 /* DataTranslations.swift */; };
 		9184A26E20EE57200084FED2 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26D20EE57200084FED2 /* TranslationService.swift */; };
 		9184A27020EF2AA20084FED2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184A26F20EF2AA20084FED2 /* Helper.swift */; };
@@ -57,6 +58,7 @@
 		911B21D120F246F40056C9E3 /* DataWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWeather.swift; sourceTree = "<group>"; };
 		911B21D320F248BE0056C9E3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		911B21D520F249540056C9E3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		9144EC2020F8955900F5A03E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9184A26B20EE55990084FED2 /* DataTranslations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTranslations.swift; sourceTree = "<group>"; };
 		9184A26D20EE57200084FED2 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		9184A26F20EF2AA20084FED2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				9184A26F20EF2AA20084FED2 /* Helper.swift */,
+				9144EC2020F8955900F5A03E /* Constants.swift */,
 				910AD80A20E36EE400C216D7 /* Assets.xcassets */,
 				910AD80F20E36EE400C216D7 /* Info.plist */,
 			);
@@ -363,6 +366,7 @@
 				911B21D620F249540056C9E3 /* Weather.swift in Sources */,
 				9184A26C20EE55990084FED2 /* DataTranslations.swift in Sources */,
 				9184A26E20EE57200084FED2 /* TranslationService.swift in Sources */,
+				9144EC2120F8955900F5A03E /* Constants.swift in Sources */,
 				9184A27020EF2AA20084FED2 /* Helper.swift in Sources */,
 				9198DD1520E7D30D00FCB5FA /* CurrencyService.swift in Sources */,
 				910AD82420E3784000C216D7 /* CurrencyViewController.swift in Sources */,

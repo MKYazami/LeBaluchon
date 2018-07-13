@@ -31,7 +31,9 @@ class CurrencyService {
     func getCurrency(callBack: @escaping (Bool, Currency?) -> Void) {
         
         // Set url for Session
-        let url = URL(string: "http://data.fixer.io/api/latest?access_key=f6ce7945bcfdbe9f45515b27e53ae84f&symbols=usd")!
+        typealias FixerURL = Constants.FixerAPI
+        let urlString = FixerURL.baseURL + FixerURL.accessKeyParameter + FixerURL.apiKey + FixerURL.symbolsParameter + "usd"
+        let url = URL(string: urlString)!
         
         var task: URLSessionDataTask?
         

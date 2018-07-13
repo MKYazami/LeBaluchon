@@ -9,17 +9,9 @@
 import Foundation
 import UIKit
 
-/// Contains static data general to the project
-struct HelperData {
-    /// Contains the title to present to user in case of any http request error
-    static let httpErrorRequestAlertTitle = "Probléme réseau !"
-    
-    /// Contains the message to present to user in case of any http request error
-    static let httpErrorRequestAlertMessage = "Veuilliez vérifier votre connexion ou réessayer ultérieurement"
-}
-
 /// Contains useful general methods to the project
 class Helper {
+    
     /// Allows to toogle activity indicator with button, when true the method hide button and show acticity indicator
     ///
     /// - Parameters:

@@ -36,7 +36,7 @@ class CurrencyViewController: UIViewController {
             if success, let currency = currency {
                 self.updateDisplay(currency: currency)
             } else {
-                self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertMessage)
+                self.alertMessage(title: Constants.ErrorHandler.httpErrorRequestAlertTitle, message: Constants.ErrorHandler.httpErrorRequestAlertMessage)
             }
         }
     }

@@ -35,7 +35,7 @@ class WeatherViewController: UIViewController {
             if success, let dataWeather = dataWeather {
                 self.updateDisplay(temperature: dataWeather.query.results.channel.item.condition.temp, codeConditions: dataWeather.query.results.channel.item.condition.code, temperatureLabel: self.newyorkTemperatureLabel, imageViewIconConditions: self.newyorkWeatherConditionsIcon)
             } else {
-                self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertTitle)
+                self.alertMessage(title: Constants.ErrorHandler.httpErrorRequestAlertTitle, message: Constants.ErrorHandler.httpErrorRequestAlertMessage)
             }
         }
     }
@@ -46,7 +46,7 @@ class WeatherViewController: UIViewController {
             if success, let dataWeather = dataWeather {
                 self.updateDisplay(temperature: dataWeather.query.results.channel.item.condition.temp, codeConditions: dataWeather.query.results.channel.item.condition.code, temperatureLabel: self.parisTemperatureLabel, imageViewIconConditions: self.parisWeatherConditionsIcon)
             } else {
-                self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertMessage)
+                self.alertMessage(title: Constants.ErrorHandler.httpErrorRequestAlertTitle, message: Constants.ErrorHandler.httpErrorRequestAlertMessage)
             }
         }
     }

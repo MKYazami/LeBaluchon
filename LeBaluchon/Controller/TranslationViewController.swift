@@ -49,7 +49,7 @@ class TranslationViewController: UIViewController {
             if success, let translatedText = translatedText?.translatedText {
                 self.updateDisplay(textTranslated: translatedText)
             } else {
-                self.alertMessage(title: HelperData.httpErrorRequestAlertTitle, message: HelperData.httpErrorRequestAlertMessage)
+                self.alertMessage(title: Constants.ErrorHandler.httpErrorRequestAlertTitle, message: Constants.ErrorHandler.httpErrorRequestAlertMessage)
             }
             
         }

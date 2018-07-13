@@ -50,4 +50,15 @@ struct Constants {
         static let format = "json"
     }
     
+    /// Contains some constants to handle general errors
+    struct ErrorHandler {
+        // MARK: Network errors
+        /// Contains the title to present to user in case of any http request error
+        static let httpErrorRequestAlertTitle = "Probléme réseau !"
+        
+        /// Contains the message to present to user in case of any http request error
+        static let httpErrorRequestAlertMessage = "Veuilliez vérifier votre connexion ou réessayer ultérieurement"
+
+    }
+    
 }

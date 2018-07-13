@@ -17,6 +17,14 @@ class TranslationViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    // MARK: Properties
+    
+    /// This array allow to display the pair language in the UIPickerView and determine which one is used
+    let languageTranslationPair = [
+        "Français -> Anglais",
+        "Anglais -> Français"
+    ]
+    
     // MARK: Action
     @IBAction func translate() {
         Helper.toogleActivityController(activityIndicator: activityIndicator, button: translateBtn, showActivityIndicator: true)

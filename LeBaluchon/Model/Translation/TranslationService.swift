@@ -65,8 +65,7 @@ class TranslationService {
                 }
                 
                 // If all checks are okay, we set call back to true with the data
-                let translation = TranslatedText(translatedText: translatedText.translatedText)
-                callBack(true, translation)
+                callBack(true, translatedText)
             }
             
         }

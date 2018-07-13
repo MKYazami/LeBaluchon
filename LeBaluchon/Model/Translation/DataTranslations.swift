@@ -20,9 +20,3 @@ struct Translations: Decodable {
 struct TranslatedText: Decodable {
     let translatedText: String?
 }
-
-/// This array allow to display the pair language in the UIPickerView and determine which one is used
-let languageTranslationPair = [
-    "Français -> Anglais",
-    "Anglais -> Français"
-]

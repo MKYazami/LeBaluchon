@@ -54,15 +54,12 @@ class CurrencyService {
                 }
                 
                 // Decode the JSON data
-                guard let reponseJSON = try? JSONDecoder().decode(Currency.self, from: data),
-                    let base = reponseJSON.baseCurrency,
-                    let rate = reponseJSON.rates else {
+                guard let currency = try? JSONDecoder().decode(Currency.self, from: data) else {
                         callBack(false, nil)
                         return
                 }
                 
                 // If all checks are okay, we set call back to true with the data
-                let currency = Currency(baseCurrency: base, rates: rate)
                 callBack(true, currency)
                 
             }
